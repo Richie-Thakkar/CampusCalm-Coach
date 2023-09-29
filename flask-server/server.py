@@ -4,7 +4,7 @@ from datetime import timedelta,timezone,datetime
 import string,secrets,requests
 import jwt
 from jwt.exceptions import ExpiredSignatureError
-
+import hashlib
 import yaml,json
 from passlib.hash import sha256_crypt
 from flask_jwt_extended import create_access_token,get_jwt,get_jwt_identity,unset_jwt_cookies, jwt_required, JWTManager
@@ -86,35 +86,43 @@ def check():
     if user is None:
         return jsonify(status="User not Found")
     else:
-        url = "https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send"
+        url = "https://email-authentication-system.p.rapidapi.com/"
 
-        payload = {
-            "personalizations": [
-                {
-                    "to": [{ "email": email }],
-                    "subject": "Otp"
-                }
-            ],
-            "from": { "email": "richie.thakkar@gmail.com" },
-            "content": [
-                {
-                    "type": "text/plain",
-                    "value": genotp
-                }
-            ]
-        }
+        querystring = {"recipient":email,"app":"Login System"}
+
         headers = {
-            "content-type": "application/json",
             "X-RapidAPI-Key": "9eabe601b6msh1ea06cb8d54a0d4p15c5ffjsn511bfb4c034f",
-            "X-RapidAPI-Host": "rapidprod-sendgrid-v1.p.rapidapi.com"
+            "X-RapidAPI-Host": "email-authentication-system.p.rapidapi.com"
         }
-        response = requests.post(url, json=payload, headers=headers)
-        if response.status_code==202:
-            return jsonify(status="found",otp=genotp)
+        response = requests.get(url, headers=headers, params=querystring)
+        response_json=response.json()
+        if response.status_code==202 or 200:
+            resp = make_response(jsonify(status="found"))
+            # Set the cookie
+            resp.set_cookie('hash',response_json['authenticationCode'] )
+            return resp
         else:
             return jsonify(status="Not found")
 
-
+@app.route('/getHash',methods=['POST'])
+def hashkaro():
+    # Get the JSON data and encode it to bytes
+    json_data = request.get_json()
+    json_data_bytes = json_data.encode('utf-8')
+    
+    # Calculate the MD5 hash
+    otp = hashlib.md5(json_data_bytes).hexdigest()
+    
+    cookiedata = request.cookies.get('hash')
+    
+    if cookiedata == otp:
+        response = jsonify(status='ok')
+        response.set_cookie('hash', max_age=0)
+        return response
+    else:
+        response = jsonify(status='unauthorized')
+        response.set_cookie('hash', max_age=0)
+        return response
 @app.route('/updatePassword',methods=['POST'])
 def updatePassword():
     email=request.json['email']
@@ -214,20 +222,6 @@ def get_Psy():
     psy=models.Table("Psy","id","Name","Rating","Experience","Location","Gender","Degree","Languages","Phone","Fees")
     results=psy.getall("1","1")
     return jsonify(results)
-# @app.route("/TeacherDashboard", methods=['POST'])
-# def tdetails():
-#     sessionId = request.json["sessionId"]
-#     print(sessionId)
-#     tchs = models.Table("teaches","tid","sid")
-#     results=tchs.getsids(sessionId)
-#     subs=models.Table("subjects","sid","sname")
-#     subjectlist=[]
-#     for result in results:
-#         temp=subs.findsub(result)
-#         print(subs.findsub(result))
-#         subjectlist.append(temp)
-#     response = {'subjects': subjectlist}
-#     return jsonify(response)
     
 
     

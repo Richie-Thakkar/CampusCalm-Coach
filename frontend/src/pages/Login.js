@@ -115,13 +115,26 @@ if(respData.status==='found')
 {
   
   let otpcheck=prompt("Enter the OTP sent to your registered Email Address");
-  if(otpcheck===respData.otp)
+  if(otpcheck)
   {
-    props.setToken("JustADummyCookieToByPAss");
-    sessionStorage.setItem("email",email);
-    navigate("/user/ForgotPassword");
+    fetch('/getHash',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(otpcheck),
+    })
+    .then((response)=>response.json())
+    .then((hashResponse)=>{
+      console.log(hashResponse);
+      if(hashResponse.status==='ok')
+      {
+          props.setToken("JustADummyCookieToByPAss");
+          sessionStorage.setItem("email",email);
+          navigate("/user/ForgotPassword"); 
+      }
+      else alert("Invalid Otp! Please try again");
+    })
   }
-  else alert("Invalid Otp! Please try again");
+  
 }
 else alert("Entered Email ID is not registered with us\nPlease Sign up if you are a new user");
     })
