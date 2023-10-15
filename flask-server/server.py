@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request,make_response
 from flask_mysqldb import MySQL
 from datetime import timedelta,timezone,datetime
 import string,secrets,requests
-import jwt
+# import jwt
 from jwt.exceptions import ExpiredSignatureError
 import hashlib
 import yaml,json
