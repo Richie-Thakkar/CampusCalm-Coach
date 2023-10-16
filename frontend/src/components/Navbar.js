@@ -15,7 +15,7 @@ function Navbar()
   };
   //const {sessionId,sessionStatus,storeSessionId,setSessionId,setSessionStatus }=SessionManager();
   const handleLogOut = () => {
-    fetch('/logout', {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/logout`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
     })

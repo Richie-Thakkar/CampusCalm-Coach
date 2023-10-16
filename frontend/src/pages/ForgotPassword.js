@@ -28,7 +28,7 @@ function ForgotPassword()
                 email:sessionStorage.getItem('email'),
                 newPassword:credentials.password,
             }
-            fetch('/updatePassword', {
+            fetch(`${process.env.REACT_APP_BACKEND_URL}/updatePassword`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data),

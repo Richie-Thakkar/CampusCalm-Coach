@@ -15,7 +15,7 @@ const [sessionStatus, setSessionStatus] = useState(null);
     const checkSessionStatus = async () => {
       try {
         console.log(sessionId);
-        const response = await fetch("/sessionCheck", {
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/sessionCheck`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({"testid": sessionId }),

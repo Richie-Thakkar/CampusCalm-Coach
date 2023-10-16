@@ -27,7 +27,7 @@ function GAD7(){
     const quiz3Score=newScore;
     const reports={Email_ID,MTScore,quiz1Score,quiz2Score,quiz3Score};
     console.log(reports);
-fetch('/insertReport', {
+fetch(`${process.env.REACT_APP_BACKEND_URL}/insertReport`, {
   method:'POST',
   headers: { 
     'Content-Type': 'application/json',

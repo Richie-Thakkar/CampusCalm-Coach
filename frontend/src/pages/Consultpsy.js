@@ -18,7 +18,7 @@ function Consultpsy() {
   
   const [psy, setPsy] = useState([]);
   useEffect(() => {
-    fetch("/getPsy", {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/getPsy`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
