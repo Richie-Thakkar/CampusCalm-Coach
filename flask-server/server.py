@@ -8,8 +8,10 @@ import hashlib
 import yaml,json
 from passlib.hash import sha256_crypt
 from flask_jwt_extended import create_access_token,get_jwt,get_jwt_identity,unset_jwt_cookies, jwt_required, JWTManager
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
+CORS(app,supports_credentials=True)
 app.config["JWT_SECRET_KEY"] = "ooh_so_secret"
 app.config["JWT_ACCESS_TOKEN_EXPIRES"] = timedelta(hours=1)
 app.config['JWT_TOKEN_LOCATION'] = ['cookies']
@@ -28,6 +30,7 @@ import models
 
 def verify_jwt_token():
     jwt_token = request.cookies.get("access_token")  # Retrieve the JWT token from the httpOnly cookie
+    print(jwt_token)
     if not jwt_token:
         print("token not found")
         return False
@@ -56,6 +59,7 @@ def refresh_expiring_jwts(response):
         return response
 
 @app.route('/login',methods=['POST'])
+@cross_origin(supports_credentials=True)
 def login():
     users = models.Table("users","Email_ID","Password")
     email = request.json['Email_ID']
@@ -77,6 +81,7 @@ def login():
             return response
 
 @app.route('/checkMail', methods=['POST'])
+@cross_origin(supports_credentials=True)
 def check():
     email=request.get_json()
     users = models.Table("users","Email_ID")
@@ -105,6 +110,7 @@ def check():
             return jsonify(status="Not found")
 
 @app.route('/getHash',methods=['POST'])
+@cross_origin(supports_credentials=True)
 def hashkaro():
     # Get the JSON data and encode it to bytes
     json_data = request.get_json()
@@ -123,7 +129,9 @@ def hashkaro():
         response = jsonify(status='unauthorized')
         response.set_cookie('hash', max_age=0)
         return response
+    
 @app.route('/updatePassword',methods=['POST'])
+@cross_origin(supports_credentials=True)
 def updatePassword():
     email=request.json['email']
     newPassword=request.json['newPassword']
@@ -142,12 +150,14 @@ def updatePassword():
 
 
 @app.route('/logout',methods=['POST'])
+@cross_origin(supports_credentials=True)
 def logout():
     response = jsonify({"msg": "logout successful"})
     unset_jwt_cookies(response)
     return response
 
 @app.route('/signup', methods=['POST'])
+@cross_origin(supports_credentials=True)
 def signup():
     users = models.Table("users", "Email_ID", "FirstName", "LastName","Password")
     FirstName = request.json['FirstName']
@@ -179,6 +189,7 @@ def signup():
 
 
 @app.route('/insertReport',methods=['POST'])
+@cross_origin(supports_credentials=True)
 def insert_report():
     token = verify_jwt_token()
     if not token:
@@ -203,8 +214,8 @@ def insert_report():
     reports.insert(report_data)
     return jsonify("Insertion Succesful")
 
-
 @app.route('/getReport',methods=['POST'])
+@cross_origin(supports_credentials=True)
 def getReport():
     token = verify_jwt_token()
     if not token:
@@ -215,6 +226,7 @@ def getReport():
     return jsonify(results)    
 
 @app.route('/getPsy',methods=['POST'])
+@cross_origin(supports_credentials=True)
 def get_Psy():
     token = verify_jwt_token()
     if not token:

@@ -34,6 +34,7 @@ fetch(`${process.env.REACT_APP_BACKEND_URL}/insertReport`, {
     'Authorization': 'Bearer ' + sessionStorage.getItem("token")
    },
   body: JSON.stringify(reports),
+  credentials: 'include',
 })
 .catch((error) => console.error(error));
 };

@@ -24,6 +24,7 @@ function Consultpsy() {
         "Content-Type": "application/json",
         Authorization: "Bearer " + sessionStorage.getItem("token"),
       },
+      credentials: 'include',
     })
       .then((response) => response.json())
       .then((data) => setPsy(data));
