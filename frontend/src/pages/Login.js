@@ -38,7 +38,7 @@ function Login(props) {
     const Password = credentials.Password;
     const data = { Email_ID, Password };
     console.log(data);
-    fetch('/login', {
+    fetch(`${process.env.BACKEND_URL}/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
@@ -85,7 +85,7 @@ function Login(props) {
       Password,
     };
     console.log(data);
-    fetch('/signup', {
+    fetch(`${process.env.BACKEND_URL}/signup`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
@@ -104,7 +104,7 @@ const handleForgotPassword=(event)=>
   let email=prompt("Please enter your email address");
 if(email!==undefined)
 {
-  fetch('/checkMail', {
+  fetch(`${process.env.BACKEND_URL}/checkMail`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(email),
@@ -117,7 +117,7 @@ if(respData.status==='found')
   let otpcheck=prompt("Enter the OTP sent to your registered Email Address");
   if(otpcheck)
   {
-    fetch('/getHash',{
+    fetch(`${process.env.BACKEND_URL}/getHash`,{
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify(otpcheck),

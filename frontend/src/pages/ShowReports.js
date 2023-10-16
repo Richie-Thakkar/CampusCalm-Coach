@@ -7,7 +7,7 @@ function ShowReports() {
   const [reports, setReports] = useState([]);
 const{token}=UseToken();
   useEffect(() => {
-    fetch(`/getReport`, {
+    fetch(`${process.env.BACKEND_URL}/getReport`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json", 
