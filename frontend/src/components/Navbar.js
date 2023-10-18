@@ -43,8 +43,15 @@ function Navbar()
           </div>
           <nav className={`navBlock ${isMenuOpen ? 'open' : ''}`}>
             <ul>
-              <NavLink to='/user/aboutUs'><li>About us</li></NavLink>
-              <NavLink to='/user/contactUs'><li>Contact us</li></NavLink>
+            <div class="dropdown">
+  <button class="dropbtn">More Options &#x25BC;</button>
+  <div class="dropdown-content">
+    <a href="#">Blog</a>
+    <NavLink to='/user/aboutUs' style={{"color":"black"}}><li>About us</li></NavLink>
+    <NavLink to='/user/contactUs' style={{"color":"black"}}><li>Contact us</li></NavLink>          
+    <a href="#">Profile</a>
+  </div>
+</div>
               <NavLink to='/user/tasks'><li>Tasks</li></NavLink>
               <NavLink to='/user/showReports'><li>Show Reports</li></NavLink>
               <NavLink to='/user/ConsultPsychiatrist'><li>Consult Psychiatrist</li></NavLink>
