@@ -14,7 +14,7 @@ import GAD7 from "./pages/GAD7";
 import Consultpsy from "./pages/Consultpsy";
 import UseToken from "./components/UseToken";
 import ForgotPassword from "./pages/ForgotPassword";
-
+import UserProfile from "./pages/UserProfile";
 function App() {
   const { token, removeToken, setToken } = UseToken();
 
@@ -80,6 +80,11 @@ function App() {
               exact
               path="/user/ConsultPsychiatrist"
               element={<Consultpsy />}
+            />
+            <Route
+              exact
+              path="/user/profile"
+              element={<UserProfile token={token} setToken={setToken} />}
             />
           </Routes>
         )}

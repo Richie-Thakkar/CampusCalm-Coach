@@ -143,6 +143,26 @@ def updatePassword():
     else:
         return jsonify(status="success")
 
+@app.route('/updateUserDetails',methods=['POST'])
+@cross_origin(supports_credentials=True)
+def updateUserProfile():
+    try:
+        data = request.get_json()
+        user_email = data.get("Email_ID")  # Identify the user by email
+        update_data = {
+            "FirstName": data.get("FirstName"),
+            "LastName": data.get("LastName"),
+            "Institution": data.get("Institution"),
+            "Class": data.get("Class"),
+            "Stream": data.get("Stream"),
+            "Specialty": data.get("Specialty"),
+        }
+        users=models.Table("users","Email_ID","FirstName", "LastName","DOB","Institution","Class","Stream","Specialty")
+        result = users.updateMultiple(user_email, update_data)
+        if result is not None:   
+            return jsonify({"success": True, "message": "Profile updated successfully"})
+    except Exception as e:
+        return jsonify({"success": False, "error": str(e)})
 
     
 
@@ -223,7 +243,18 @@ def getReport():
     Email_ID=request.json["Email_ID"]
     reports=models.Table("reports","Email_ID","Mood","SRQ","PHQ","GAD","Date_and_time")
     results=reports.getall("Email_ID",Email_ID)
-    return jsonify(results)    
+    return jsonify(results) 
+   
+@app.route('/getUserDetails',methods=['POST'])
+@cross_origin(supports_credentials=True)
+def get_User_Details():
+    token = verify_jwt_token()
+    if not token:
+        return jsonify(message='Invalid or expired JWT token'), 401
+    Email_ID=request.json["Email_ID"]
+    details=models.Table("users","Email_ID","FirstName", "LastName","DOB","Institution","Class","Stream","Specialty")
+    results=details.getall("Email_ID",Email_ID)
+    return jsonify(results)
 
 @app.route('/getPsy',methods=['POST'])
 @cross_origin(supports_credentials=True)

@@ -46,33 +46,27 @@ class Table:
         mysql.connection.commit()
         cur.close()
         return result
+    
+    def updateMultiple(self, email, update_data):
+        cur = mysql.connection.cursor()
+        
+        # Create a dynamic SET clause for updating multiple attributes
+        set_clause = ", ".join([f"{key} = %s" for key in update_data.keys()])
+        
+        query = f"UPDATE {self.table} SET {set_clause} WHERE EMAIL_ID = %s"
+        
+        # Create a tuple of values for the SET clause
+        values = tuple(update_data.values()) + (email,)  # Add email as the last value
+        
+        result = cur.execute(query, values)
+        
+        mysql.connection.commit()
+        cur.close()
+        
+        return result
+
         
         
 
-    '''def getdetailst(self,value):
-        c=mysql.connection.cursor()
-        result=c.execute("SELECT teacher.tname, subjects.sname FROM teacher JOIN teaches ON teacher.tid = teaches.tid JOIN subjects ON teaches.sid = subjects.sid WHERE teacher.tid = \"%s\"" ,(value,))
-        if result>0:
-            data={}
-            data=c.fetchall()
-            c.close()
-            return data
-    def getsids(self, value):
-        cur = mysql.connection.cursor()
-        result = cur.execute("SELECT sid FROM %s WHERE tid = \"%s\"" %(self.table,value))
-        if result > 0: 
-            data = {}; 
-            data = cur.fetchall()
-            cur.close(); 
-            return data
-    def findsub(self,value):
-        cur = mysql.connection.cursor()
-        result = cur.execute("SELECT sname FROM subjects WHERE sid = \"%s\"" %(value))
-        if result > 0: 
-            dt = {}; 
-            dt = cur.fetchone()
-            cur.close(); 
-            return dt'''
-        
         
     
