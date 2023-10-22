@@ -13,7 +13,6 @@ function Create_blog(){
             method: "POST",
             headers:{
                 "Content-Type": "application/json",
-                Authorization:"Bearer" + sessionStorage.getItem("token"),
             },
             credentials: 'include',
         })

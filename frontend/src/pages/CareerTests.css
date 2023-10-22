@@ -1,0 +1,23 @@
+.TestSection{
+    margin-top: 5vmax;
+    display: grid;
+grid-template-columns: auto auto auto;
+gap: 11vmax;
+justify-content: space-evenly;
+}
+.startButton1{
+    color: white;
+    background: linear-gradient(#477be4, #084edc);;
+    width: 250px;
+    height: 80px;
+    border-radius: 10%;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+}
+.startButton1:hover{
+    transform: scale(1.1);
+}
+.startButton1:active{
+    transform: scale(0.8);
+}

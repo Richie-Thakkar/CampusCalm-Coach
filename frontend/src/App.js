@@ -15,6 +15,11 @@ import Consultpsy from "./pages/Consultpsy";
 import UseToken from "./components/UseToken";
 import ForgotPassword from "./pages/ForgotPassword";
 import UserProfile from "./pages/UserProfile";
+import CareerTests from "./pages/CareerTests";
+import Blogs from "./pages/Blogs";
+import Blog from "./pages/Blog";
+import PsyBlog from "./pages/PsyBlog";
+import Create_blog from "./pages/Create_blog";
 function App() {
   const { token, removeToken, setToken } = UseToken();
 
@@ -86,6 +91,32 @@ function App() {
               path="/user/profile"
               element={<UserProfile token={token} setToken={setToken} />}
             />
+            <Route
+              exact
+              path="/user/CareerTests"
+              element={<CareerTests token={token} setToken={setToken} />}
+            />
+            <Route
+              exact
+              path="/user/Blogs"
+              element={<Blogs token={token} setToken={setToken} />}
+            />
+            <Route
+              exact
+              path="/user/Blog"
+              element={<Blog token={token} setToken={setToken} />}
+            />
+            <Route
+              exact
+              path="/psy/PsyBlog"
+              element={<PsyBlog token={token} setToken={setToken} />}
+            />
+            <Route
+              exact
+              path="/psy/CreateBlog"
+              element={<Create_blog token={token} setToken={setToken} />}
+            />
+
           </Routes>
         )}
       </div>

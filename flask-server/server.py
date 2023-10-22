@@ -9,6 +9,7 @@ import yaml,json
 from passlib.hash import sha256_crypt
 from flask_jwt_extended import create_access_token,get_jwt,get_jwt_identity,unset_jwt_cookies, jwt_required, JWTManager
 from flask_cors import CORS, cross_origin
+import base64
 
 app = Flask(__name__)
 CORS(app,supports_credentials=True)
@@ -265,7 +266,57 @@ def get_Psy():
     psy=models.Table("Psy","id","Name","Rating","Experience","Location","Gender","Degree","Languages","Phone","Fees")
     results=psy.getall("1","1")
     return jsonify(results)
+
+@app.route('/getPost', methods=['POST'])
+@cross_origin(supports_credentials=True)
+def get_Post():
+    # Verify the JWT token for authentication
+    token = verify_jwt_token()
+    if not token:
+        return jsonify(message='Invalid or expired JWT token'), 401
+
+    # Fetch data from the "Blogs" table
+    post = models.Table("Blogs", "title", "author", "Publication_date", "tags", "Description", "Subtitle", "Body", "Image")
+    results = post.getall("1", "1")
     
+    # Modify the fetched data and create a new list with modified elements
+    modified_data = []
+    for rs in results:
+        if rs[7] is not None:
+            image_data = base64.b64decode(rs[7])
+            # Perform other modifications to the data as required
+            modified_image_data = base64.b64encode(image_data).decode('utf-8')
+            modified_tuple = rs[:7] + (modified_image_data,) + rs[8:]  # Create a new tuple with modified data
+            modified_data.append(modified_tuple)
+        else:
+            modified_data.append(rs)
+
+    # Return the modified data as JSON
+    return jsonify(modified_data)
+
+
+@app.route('/putPost',methods=['POST'])
+@cross_origin(supports_credentials=True)
+def put_Post():
+    token = verify_jwt_token()
+    if not token:
+        return jsonify(message='Invalid or expired JWT token'), 401
+    data=request.get_json()
+    # print(data)
+    #print(request.json)
+    post=models.Table("Blogs","Title","Author","Publication_date","tags","Description","Subtitle","Body","Image")
+    post_data = {
+        "Author": data.get("author"),
+        "Publication_date":datetime.today().strftime('%Y-%m-%d'),
+        "tags": data.get("tags"),
+        "Description": data.get("description"),
+        "title":data.get("title"),
+        "Subtitle": data.get("subtitle"),
+        "Body": data.get("body"),
+        "Image": data.get("image")
+    }
+    post.insert(post_data)
+    return jsonify("Blog created successfully")
 
     
 

@@ -18,7 +18,7 @@ function Blogs() {
             credentials: 'include',
         })
         .then((response) => response.json())
-        .then((data) => setPost(data))
+        .then((data) => {setPost(data);console.log(data);})
     // title , author , date of publish , tags, description , SubTitle, body , image 
     // mysql table : CREATE TABLE BLOGS (Blog_id,Title,Author,Publication_date,Description of blog,Blog body,Image for the blog);
     },[])
@@ -29,11 +29,8 @@ function Blogs() {
           {post.map((p) => (
             <div className="psyinfo" >
               <div className="pdata">
-                <img src="{p[7]}"/>
+                <img src={`data:image/png;base64,${p[7]}`} alt="Image" className="psyimg"/>
                 <div className="inf">
-                  <span className="item1">
-                    <b>{p[0]}</b>
-                  </span>
                   <span className="item2">
                   <p>{p[3]}</p>
                   </span>
@@ -45,7 +42,7 @@ function Blogs() {
                 </span>
                 <span className="item5">
                   <NavLink
-                    to="/blog"
+                    to="/user/Blog"
                     state={{p:p}}
                     exact>
                   <button className="searchbtn">
