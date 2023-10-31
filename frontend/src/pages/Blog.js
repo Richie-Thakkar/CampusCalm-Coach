@@ -8,7 +8,7 @@ function Blog(){
     const {p} = location.state
     console.log(p);
     return(
-        <>
+        <section className="blogsect"> 
             <Navbar />
             <section>
                 <h1>{p[0]}</h1>
@@ -33,7 +33,7 @@ function Blog(){
                 {p[6]}
             </div>
             <Footer />
-        </>
+        </section>
     )
 }
 export default Blog

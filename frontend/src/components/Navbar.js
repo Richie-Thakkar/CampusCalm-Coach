@@ -46,7 +46,7 @@ function Navbar()
             <div className="dropdown">
   <button className="dropbtn">More Options &#x25BC;</button>
   <div className="dropdown-content">
-    <a href="#">Blog</a>
+    <NavLink to = '/user/Blogs'><li style={{"color":"black","fontWeight":"lighter"}}>Blog</li></NavLink>
     <NavLink to='/user/aboutUs'><li style={{"color":"black","fontWeight":"lighter"}}>About us</li></NavLink>
     <NavLink to='/user/contactUs'><li style={{"color":"black","fontWeight":"lighter"}}>Contact us</li></NavLink>          
     <NavLink to='/user/profile'><li style={{"color":"black","fontWeight":"lighter"}}>Profile</li></NavLink>          

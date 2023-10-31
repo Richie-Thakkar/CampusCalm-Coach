@@ -79,6 +79,7 @@ input[type="radio"] {
   padding: 2vmax;
   margin-left: 1.5vmax;
   margin-right: 1.5vmax;
+  min-height: 1000px;
 }
 
 .psyinfo {
@@ -95,6 +96,7 @@ input[type="radio"] {
   margin-right: 2%;
   border-radius: 15%;
 }
+
 .fsresp{
   display: none;
 }

@@ -108,6 +108,7 @@ if(email!==undefined)
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(email),
+    credentials: 'include',
   })
     .then((response) => response.json())
     .then((respData) => {
@@ -121,6 +122,7 @@ if(respData.status==='found')
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify(otpcheck),
+      credentials:'include',
     })
     .then((response)=>response.json())
     .then((hashResponse)=>{

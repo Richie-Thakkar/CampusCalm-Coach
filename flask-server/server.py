@@ -102,7 +102,8 @@ def check():
         }
         response = requests.get(url, headers=headers, params=querystring)
         response_json=response.json()
-        if response.status_code==202 or 200:
+        print(response.status_code)
+        if response.status_code==202 or response.status_code == 200:
             resp = make_response(jsonify(status="found"))
             # Set the cookie
             resp.set_cookie('hash',response_json['authenticationCode'] )
@@ -121,7 +122,8 @@ def hashkaro():
     otp = hashlib.md5(json_data_bytes).hexdigest()
     
     cookiedata = request.cookies.get('hash')
-    
+    print(f"cookiedata",cookiedata)
+    print("otp",otp)
     if cookiedata == otp:
         response = jsonify(status='ok')
         response.set_cookie('hash', max_age=0)
