@@ -53,7 +53,7 @@ function Home() {
 </span>
 <div className='btdiv'><NavLink to='/user/moodTest'><button type='submit' className='startButton'>Take Assesment</button></NavLink></div>
 <div className='btdiv'><NavLink to='/user/CareerTests'><button type='submit' className='startButton'>Career Guidance</button></NavLink></div>
-<div className='btdiv'><NavLink to='/user/moodTest'><button type='submit' className='startButton'>Chat with GyaniBot</button></NavLink></div>
+<div className='btdiv'><NavLink to='/user/chatbot'><button type='submit' className='startButton'>Chat with GyaniBot</button></NavLink></div>
 </div>
 </div>
 </section>

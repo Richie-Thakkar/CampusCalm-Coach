@@ -20,6 +20,7 @@ import Blogs from "./pages/Blogs";
 import Blog from "./pages/Blog";
 import PsyBlog from "./pages/PsyBlog";
 import Create_blog from "./pages/Create_blog";
+import Chatbot from "./pages/Chatbot";
 function App() {
   const { token, removeToken, setToken } = UseToken();
 
@@ -116,7 +117,11 @@ function App() {
               path="/psy/CreateBlog"
               element={<Create_blog token={token} setToken={setToken} />}
             />
-
+            <Route
+              exact
+              path="/user/chatbot"
+              element={<Chatbot token={token} setToken={setToken} />}
+            />
           </Routes>
         )}
       </div>

@@ -25,8 +25,9 @@
 
 .stu-prf-info img {
     border-radius: 26%;
-    width: 15vw;
+    width: 10vw;
     object-fit: cover;
+    margin: 3px;
     border: 3px solid black;
 }
 

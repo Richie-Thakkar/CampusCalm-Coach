@@ -5,12 +5,12 @@ import string,secrets,requests
 import jwt
 from jwt.exceptions import ExpiredSignatureError
 import hashlib
-import yaml,json
+import yaml,json,os
 from passlib.hash import sha256_crypt
 from flask_jwt_extended import create_access_token,get_jwt,get_jwt_identity,unset_jwt_cookies, jwt_required, JWTManager
 from flask_cors import CORS, cross_origin
-import base64
-
+import base64,openai
+openai.api_key = os.getenv("API_KEY")
 app = Flask(__name__)
 CORS(app,supports_credentials=True)
 app.config["JWT_SECRET_KEY"] = "ooh_so_secret"
@@ -80,6 +80,23 @@ def login():
             response=make_response(jsonify(status="Auth Success!",atk=access_token))
             response.set_cookie('access_token',access_token)
             return response
+
+@app.route('/chatbot', methods=['POST'])
+@cross_origin(supports_credentials=True)
+def chatbot():
+    message = request.get_json()["message"]
+    response = openai.ChatCompletion.create(
+    model="gpt-3.5-turbo",
+    messages=[
+            {"role": "user", "content": "You are gyanibot, a supportive companion for my mental health journey"},
+            {"role": "user", "content": message},
+    ],
+    temperature=0,
+)
+
+    return jsonify(bot_response=response['choices'][0]['message']['content'])
+    # return jsonify(bot_response="I have received your message. You are OP...Your are awesome!!")
+
 
 @app.route('/checkMail', methods=['POST'])
 @cross_origin(supports_credentials=True)
