@@ -1,0 +1,62 @@
+[
+    {
+        "question": "Here are some words translated from an artificial language.\ngorblflur means fan belt\npixngorbl means ceiling fan\narthtusl means tile roof\nWhich word could mean 'ceiling tile'?",
+        "options": ["gorbltusl", "flurgorbl", "arthflur", "pixnarth"],
+        "answer": "d"
+    },
+    {
+        "question": "Here are some words translated from an artificial language.\nhapllesh means cloudburst\nsrenchoch means pinball\nresbosrench means ninepin\nWhich word could mean 'cloud nine'?",
+        "options": ["leshsrench", "ochhapl", "haploch", "haplresbo"],
+        "answer": "d"
+    },
+    {
+        "question": "Here are some words translated from an artificial language.\nagnoscrenia means poisonous spider\ndelanocrenia means poisonous snake\nagnosdeery means brown spider\nWhich word could mean 'black widow spider'?",
+        "options": ["deeryclostagnos", "agnosdelano", "agnosvitriblunin", "trymuttiagnos"],
+        "answer": "c"
+    },
+    {
+        "question": "Here are some words translated from an artificial language.\nmoolokarn means blue sky\nwilkospadi means bicycle race\nmoolowilko means blue bicycle\nWhich word could mean 'racecar'?",
+        "options": ["wilkozwet", "spadiwilko", "moolobreil", "spadivolo"],
+        "answer": "d"
+    },
+    {
+        "question": "Here are some words translated from an artificial language.\nmigenlasan means cupboard\nlasanpoen means boardwalk\ncuopdansa means pullman\nWhich word could mean 'walkway'?",
+        "options": ["poenmigen", "cuopeisel", "lasandansa", "poenforc"],
+        "answer": "d"
+    },
+    {
+        "question": "Here are some words translated from an artificial language.\ngodabim means kidney stones\nromzbim means kidney beans\nromzbako means wax beans\nWhich word could mean 'wax statue'?",
+        "options": ["godaromz", "lazbim", "wasibako", "romzpeo"],
+        "answer": "c"
+    },
+    {
+        "question": "Here are some words translated from an artificial language.\ngranamelke means big tree\npinimelke means little tree\nmelkehoon means tree house\nWhich word could mean 'big house'?",
+        "options": ["granahoon", "pinishur", "pinihoon", "melkegrana"],
+        "answer": "a"
+    },
+    {
+        "question": "Here are some words translated from an artificial language.\ndaftafoni means advisement\nimodafta means misadvise\nimolokti means misconduct\nWhich word could mean 'statement'?",
+        "options": ["kratafoni", "kratadafta", "loktifoni", "daftaimo"],
+        "answer": "a"
+    },
+    {
+        "question": "Here are some words translated from an artificial language.\nlelibroon means yellow hat\nplekafroti means flower garden\nfrotimix means garden salad\nWhich word could mean 'yellow flower'?",
+        "options": ["lelifroti", "lelipleka", "plekabroon", "frotibroon"],
+        "answer": "b"
+    },
+    {
+        "question": "Here are some words translated from an artificial language.\nmyncabel means saddle horse\nconowir means trail ride\ncabelalma means horse blanket\nWhich word could mean 'horse ride'?",
+        "options": ["cabelwir", "conocabel", "almamyn", "conoalma"],
+        "answer": "a"
+    },
+    {
+        "question": "Here are some words translated from an artificial language.\ndionot means oak tree\nblyonot means oak leaf\nblycrin means maple leaf\nWhich word could mean 'maple syrup'?",
+        "options": ["blymuth", "hupponot", "patricrin", "crinweel"],
+        "answer": "c"
+    },
+    {
+        "question": "Here are some words translated from an artificial language.\ntamceno means sky blue\ncenorax means blue cheese\naplmitl means star bright\nWhich word could mean 'bright sky'?",
+        "options": ["cenotam", "mitltam", "raxmitl", "aplceno"],
+        "answer": "b"
+    }
+]

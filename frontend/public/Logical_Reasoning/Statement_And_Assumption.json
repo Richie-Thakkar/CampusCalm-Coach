@@ -1,0 +1,332 @@
+[
+    {
+        "question": "Statement: You are hereby appointed as a programmer with a probation period of one year, and your performance will be reviewed at the end of the period for confirmation. - A line in an appointment letter.",
+        "assumptions": [
+            "The performance of an individual generally is not known at the time of appointment offer.",
+            "Generally, an individual tries to prove his worth in the probation period."
+        ],
+        "options": [
+            "Only assumption I is implicit",
+            "Only assumption II is implicit",
+            "Either I or II is implicit",
+            "Neither I nor II is implicit",
+            "Both I and II are implicit"
+        ],
+        "answer": "e"
+    },
+    {
+        "question": "Statement: It is desirable to put the child in school at the age of 5 or so.",
+        "assumptions": [
+            "At that age, the child reaches an appropriate level of development and is ready to learn.",
+            "The schools do not admit children after six years of age."
+        ],
+        "options": [
+            "Only assumption I is implicit",
+            "Only assumption II is implicit",
+            "Either I or II is implicit",
+            "Neither I nor II is implicit",
+            "Both I and II are implicit"
+        ],
+        "answer": "a"
+    },
+    {
+        "question": "Statement: In order to bring punctuality in our office, we must provide a conveyance allowance to our employees. - In charge of a company tells Personnel Manager.",
+        "assumptions": [
+            "Conveyance allowance will not help in bringing punctuality.",
+            "Discipline and reward should always go hand in hand."
+        ],
+        "options": [
+            "Only assumption I is implicit",
+            "Only assumption II is implicit",
+            "Either I or II is implicit",
+            "Neither I nor II is implicit",
+            "Both I and II are implicit"
+        ],
+        "answer": "b"
+    },
+    {
+        "question": "Statement: Unemployment allowance should be given to all unemployed Indian youth above 18 years of age.",
+        "assumptions": [
+            "There are unemployed youth in India who need monetary support.",
+            "The government has sufficient funds to provide an allowance to all unemployed youth."
+        ],
+        "options": [
+            "Only assumption I is implicit",
+            "Only assumption II is implicit",
+            "Either I or II is implicit",
+            "Neither I nor II is implicit",
+            "Both I and II are implicit"
+        ],
+        "answer": "a"
+    },
+    {
+        "question": "Statement: If you trouble me, I will slap you. - A mother warns her child.",
+        "assumptions": [
+            "With the warning, the child may stop troubling her.",
+            "All children are basically naughty."
+        ],
+        "options": [
+            "Only assumption I is implicit",
+            "Only assumption II is implicit",
+            "Either I or II is implicit",
+            "Neither I nor II is implicit",
+            "Both I and II are implicit"
+        ],
+        "answer": "a"
+    },
+    {
+        "question": "Statement: The State government has decided to appoint four thousand primary school teachers during the next financial year.",
+        "assumptions": [
+            "There are enough schools in the state to accommodate four thousand additional primary school teachers.",
+            "The eligible candidates may not be interested in applying as the government may not finally appoint such a large number of primary school teachers."
+        ],
+        "options": [
+            "Only assumption I is implicit",
+            "Only assumption II is implicit",
+            "Either I or II is implicit",
+            "Neither I nor II is implicit",
+            "Both I and II are implicit"
+        ],
+        "answer": "a"
+    },
+    {
+        "question": "Statement: A warning in a train compartment - 'To stop the train, pull the chain. Penalty for improper use Rs. 500.'",
+        "assumptions": [
+            "Some people misuse the alarm chain.",
+            "On certain occasions, people may want to stop a running train."
+        ],
+        "options": [
+            "Only assumption I is implicit",
+            "Only assumption II is implicit",
+            "Either I or II is implicit",
+            "Neither I nor II is implicit",
+            "Both I and II are implicit"
+        ],
+        "answer": "e"
+    },
+    {
+        "question": "Statement: If it is easy to become an engineer, I don't want to be an engineer.",
+        "assumptions": [
+            "An individual aspires to be professional.",
+            "One desires to achieve a thing which is hard-earned."
+        ],
+        "options": [
+            "Only assumption I is implicit",
+            "Only assumption II is implicit",
+            "Either I or II is implicit",
+            "Neither I nor II is implicit",
+            "Both I and II are implicit"
+        ],
+        "answer": "b"
+    },
+    {
+        "question": "Statement: The concession in rail fares for the journey to hill stations has been canceled because it is not needed for people who can spend their holidays there.",
+        "assumptions": [
+            "Railways should give concessions only to needy persons.",
+            "Railways should not encourage people to spend their holidays at hill stations."
+        ],
+        "options": [
+            "Only assumption I is implicit",
+            "Only assumption II is implicit",
+            "Either I or II is implicit",
+            "Neither I nor II is implicit",
+            "Both I and II are implicit"
+        ],
+        "answer": "a"
+    },
+    {
+        "question": "Statement: 'The bridge was built at the cost of Rs. 128 crores and even civil bus service is not utilizing it, what a pity to see it grossly underutilized.' - A citizen's view on a new flyover linking east and west sides of a suburb.",
+        "assumptions": [
+            "The building of such bridges does not serve any public objective.",
+            "There has to be some accountability and utility of money spent on public projects."
+        ],
+        "options": [
+            "Only assumption I is implicit",
+            "Only assumption II is implicit",
+            "Either I or II is implicit",
+            "Neither I nor II is implicit",
+            "Both I and II are implicit"
+        ],
+        "answer": "b"
+    },
+    {
+        "question": "Statement: The government has decided to levy 2 percent on the tax amount payable for funding drought relief programs.",
+        "assumptions": [
+            "The government does not have sufficient money to fund drought relief programs.",
+            "The amount collected by way of surcharge may be adequate to fund these drought relief programs."
+        ],
+        "options": [
+            "Only assumption I is implicit",
+            "Only assumption II is implicit",
+            "Either I or II is implicit",
+            "Neither I nor II is implicit",
+            "Both I and II are implicit"
+        ],
+        "answer": "e"
+    },
+    {
+        "question": "Statement: Detergents should be used to clean clothes.",
+        "assumptions": [
+            "Detergents form more lather.",
+            "Detergents help to dislodge grease and dirt."
+        ],
+        "options": [
+            "Only assumption I is implicit",
+            "Only assumption II is implicit",
+            "Either I or II is implicit",
+            "Neither I nor II is implicit",
+            "Both I and II are implicit"
+        ],
+        "answer": "b"
+    },
+    {
+        "question": "Statement: It will be a substantial achievement in the field of education if one provides one school for every village in our country and enforces attendance.",
+        "assumptions": [
+            "Children in villages do not attend school regularly.",
+            "Providing a school to every village is desirable."
+        ],
+        "options": [
+            "Only assumption I is implicit",
+            "Only assumption II is implicit",
+            "Either I or II is implicit",
+            "Neither I nor II is implicit",
+            "Both I and II are implicit"
+        ],
+        "answer": "e"
+    },
+    {
+        "question": "Statement: The government has decided to disinvest a large chunk of its equity in select public sector undertakings for better fiscal management.",
+        "assumptions": [
+            "The amount generated out of the disinvestment process may reduce substantially the mounting fiscal deficits.",
+            "There will be enough demand in the market for the shares of these undertakings."
+        ],
+        "options": [
+            "Only assumption I is implicit",
+            "Only assumption II is implicit",
+            "Either I or II is implicit",
+            "Neither I nor II is implicit",
+            "Both I and II are implicit"
+        ],
+        "answer": "a"
+    },
+    {
+        "question": "Statement: Never before such a lucid book was available on the topic.",
+        "assumptions": [
+            "Some other books were available on this topic.",
+            "You can write lucid books on very few topics."
+        ],
+        "options": [
+            "Only assumption I is implicit",
+            "Only assumption II is implicit",
+            "Either I or II is implicit",
+            "Neither I nor II is implicit",
+            "Both I and II are implicit"
+        ],
+        "answer": "a"
+    },
+    {
+        "question": "Statement: Please do not use the lift while going down - an instruction on the top floor of a five-storey building.",
+        "assumptions": [
+            "While going down, the lift is unable to carry any load.",
+            "Provision of the lift is a matter of facility and not of right."
+        ],
+        "options": [
+            "Only assumption I is implicit",
+            "Only assumption II is implicit",
+            "Either I or II is implicit",
+            "Neither I nor II is implicit",
+            "Both I and II are implicit"
+        ],
+        "answer": "b"
+    },
+    {
+        "question": "Statement: I have not received telephone bills for nine months despite several complaints - A telephone customer's letter to the editor of a daily.",
+        "assumptions": [
+            "Every customer has a right to get bills regularly from the telephone company.",
+            "The customer's complaints point to a defect in the services which are expected to be corrected."
+        ],
+        "options": [
+            "Only assumption I is implicit",
+            "Only assumption II is implicit",
+            "Either I or II is implicit",
+            "Neither I nor II is implicit",
+            "Both I and II are implicit"
+        ],
+        "answer": "e"
+    },
+    {
+        "question": "Statement: 'This drink can be had either as it is or after adding ice to it.' - An advertisement.",
+        "assumptions": [
+            "People differ in their preferences.",
+            "Some people will get attracted to the drink as it can be had as it is."
+        ],
+        "options": [
+            "Only assumption I is implicit",
+            "Only assumption II is implicit",
+            "Either I or II is implicit",
+            "Neither I nor II is implicit",
+            "Both I and II are implicit"
+        ],
+        "answer": "e"
+    },
+    {
+        "question": "Statement: Government has permitted unaided colleges to increase their fees.",
+        "assumptions": [
+            "Unaided colleges are in financial difficulties.",
+            "Aided colleges do not need to increase fees."
+        ],
+        "options": [
+            "Only assumption I is implicit",
+            "Only assumption II is implicit",
+            "Either I or II is implicit",
+            "Neither I nor II is implicit",
+            "Both I and II are implicit"
+        ],
+        "answer": "a"
+    },
+    {
+        "question": "Statement: Be humble even after being victorious.",
+        "assumptions": [
+            "Many people are humble after being victorious.",
+            "Generally, people are not humble."
+        ],
+        "options": [
+            "Only assumption I is implicit",
+            "Only assumption II is implicit",
+            "Either I or II is implicit",
+            "Neither I nor II is implicit",
+            "Both I and II are implicit"
+        ],
+        "answer": "b"
+    },
+    {
+        "question": "Statement: The government has decided to pay compensation to the tune of Rs. 1 lakh to the family members of those who are killed in railway accidents.",
+        "assumptions": [
+            "The government has enough funds to meet the expenses due to compensation.",
+            "There may be a reduction in incidents of railway accidents in the near future."
+        ],
+        "options": [
+            "Only assumption I is implicit",
+            "Only assumption II is implicit",
+            "Either I or II is implicit",
+            "Neither I nor II is implicit",
+            "Both I and II are implicit"
+        ],
+        "answer": "a"
+    },
+    {
+        "question": "Statement: Films have become indispensable for the entertainment of people.",
+        "assumptions": [
+            "Films are the only media of entertainment.",
+            "People enjoy films."
+        ],
+        "options": [
+            "Only assumption I is implicit",
+            "Only assumption II is implicit",
+            "Either I or II is implicit",
+            "Neither I nor II is implicit",
+            "Both I and II are implicit"
+        ],
+        "answer": "b"
+    }
+]

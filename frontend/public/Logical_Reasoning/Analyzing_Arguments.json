@@ -1,0 +1,112 @@
+[
+    {
+        "question": "One New York publisher has estimated that 50,000 to 60,000 people in the United States want an anthology that includes the complete works of William Shakespeare. And what accounts for this renewed interest in Shakespeare? As scholars point out, his psychological insights into both male and female characters are amazing even today.",
+        "options": [
+            "Shakespeare's characters are more interesting than fictional characters today.",
+            "people even today are interested in Shakespeare's work because of the characters.",
+            "academic scholars are putting together an anthology of Shakespeare's work.",
+            "New Yorkers have a renewed interested in the work of Shakespeare.",
+            "Shakespeare was a psychiatrist as well as a playwright."
+        ],
+        "answer": "b"
+    },
+    {
+        "question": "One of the warmest winters on record has put consumers in the mood to spend money. Spending is likely to be the strongest in thirteen years. During the month of February, sales of existing single-family homes hit an annual record rate of 4.75 million.",
+        "options": [
+            "consumer spending will be higher thirteen years from now than it is today.",
+            "more people buy houses in the month of February than in any other month.",
+            "during the winter months, the prices of single-family homes are the lowest.",
+            "there were about 4 million homes for sale during the month of February.",
+            "warm winter weather is likely to affect the rate of home sales."
+        ],
+        "answer": "e"
+    },
+    {
+        "question": "Generation Xers are those people born roughly between 1965 and 1981. As employees, Generation Xers tend to be more challenged when they can carry out tasks independently. This makes Generation Xers the most entrepreneurial generation in history.",
+        "options": [
+            "work harder than people from other generations.",
+            "have a tendency to be self-directed workers",
+            "have an interest in making history",
+            "tend to work in jobs that require risk-taking behavior.",
+            "like to challenge their bosses' work attitudes."
+        ],
+        "answer": "b"
+    },
+    {
+        "question": "If you're a fitness walker, there is no need for a commute to a health club. Your neighborhood can be your health club. You don't need a lot of fancy equipment to get a good workout either. All you need is a well-designed pair of athletic shoes.",
+        "options": [
+            "fitness walking is a better form of exercise than weight lifting.",
+            "a membership in a health club is a poor investment.",
+            "walking outdoors provides a better workout than walking indoors.",
+            "fitness walking is a convenient and valuable form of exercise.",
+            "poorly designed athletic shoes can cause major foot injuries."
+        ],
+        "answer": "d"
+    },
+    {
+        "question": "In the past, consumers would rarely walk into an ice cream store and order low-fat ice cream. But that isn't the case today. An increasing health consciousness combined with a much bigger selection of tasty low-fat foods in all categories has made low-fat ice cream a very profitable item for ice cream store owners.",
+        "options": [
+            "low-fat ice cream produces more revenue than other low-fat foods.",
+            "ice cream store owners would be better off carrying only low-fat ice cream.",
+            "ice cream store owners no longer think that low-fat ice cream is an unpopular item.",
+            "low-fat ice cream is more popular than other kinds of ice cream.",
+            "consumers are fickle and it is impossible to please them"
+        ],
+        "answer": "c"
+    },
+    {
+        "question": "Today's high school students spend too much time thinking about trivial and distracting matters such as fashion. Additionally, they often dress inappropriately on school grounds. Rather than spending time writing another detailed dress policy, we should make school uniforms mandatory. If students were required to wear uniforms, it would increase a sense of community and harmony in our schools and it would instill a sense of discipline in our students. Another positive effect would be that teachers and administrators would no longer have to act as clothing police, freeing them up to focus on more important issues.",
+        "options": [
+            "inappropriate clothing leads to failing grades.",
+            "students who wear school uniforms get into better colleges.",
+            "teachers and administrators spend at least 25% of their time enforcing the dress code.",
+            "students are not interested in being part of a community",
+            "school uniforms should be compulsory for high school students."
+        ],
+        "answer": "e"
+    },
+    {
+        "question": "The criminal justice system needs to change. The system could be more just if it allowed victims the opportunity to confront the person who has harmed them. Also, mediation between victims and their offenders would give the offenders a chance to apologize for the harm they have done.",
+        "options": [
+            "learn to forgive their offenders.",
+            "have the right to confront their offenders.",
+            "learn the art of mediation.",
+            "insist that their offenders be punished.",
+            "have the right to impose a sentence on their offenders."
+        ],
+        "answer": "b"
+    },
+    {
+        "question": "A few states in this country are considering legislation that would prohibit schools from using calculators before the sixth grade. Other states take a different position. Some states are insisting on the purchase of graphing calculators for every student in middle school.",
+        "options": [
+            "there are at least two opinions about the use of calculators in schools.",
+            "calculators are frequently a detriment to learning math.",
+            "state legislators are more involved in education than ever before.",
+            "the price of graphing calculators is less when schools buy in bulk.",
+            "the argument against calculators in schools is unfounded."
+        ],
+        "answer": "a"
+    },
+    {
+        "question": "Today's workforce has a new set of social values. Ten years ago, a manager who was offered a promotion in a distant city would not have questioned the move. Today, a manager in that same situation might choose family happiness instead of career advancement.",
+        "options": [
+            "most managers are not loyal to the corporations for which they work.",
+            "businesses today do not understand their employees' needs.",
+            "employees' social values have changed over the past ten years.",
+            "career advancement is not important to today's business managers.",
+            "companies should require their employees to accept promotions."
+        ],
+        "answer": "c"
+    },
+    {
+        "question": "It is well known that the world urgently needs adequate distribution of food, so that everyone gets enough. Adequate distribution of medicine is just as urgent. Medical expertise and medical supplies need to be redistributed throughout the world so that people in emerging nations will have proper medical care.",
+        "options": [
+            "the majority of the people in the world have never been seen by a doctor.",
+            "food production in emerging nations has slowed during the past several years.",
+            "most of the world's doctors are selfish about giving time and money to the poor.",
+            "the medical-supply industry should step up production of its products.",
+            "many people who live in emerging nations are not receiving proper medical care"
+        ],
+        "answer": "e"
+    }
+]

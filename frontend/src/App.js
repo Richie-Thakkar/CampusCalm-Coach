@@ -21,6 +21,10 @@ import Blog from "./pages/Blog";
 import PsyBlog from "./pages/PsyBlog";
 import Create_blog from "./pages/Create_blog";
 import Chatbot from "./pages/Chatbot";
+import Logical_Reasoning from "./pages/Logical_Reasoning.1";
+import NumericalAbility from "./pages/Numerical_Ability";
+import VerbalAbility from "./pages/VerbalAbility";
+import Memory from "./pages/Memory";
 function App() {
   const { token, removeToken, setToken } = UseToken();
 
@@ -121,6 +125,26 @@ function App() {
               exact
               path="/user/chatbot"
               element={<Chatbot token={token} setToken={setToken} />}
+            />
+            <Route
+              exact
+              path="/user/career_test/logical_reasoning"
+              element={<Logical_Reasoning token={token} setToken={setToken} />}
+            />
+            <Route
+              exact
+              path="/user/career_test/arithmetic_reasoning"
+              element={<NumericalAbility token={token} setToken={setToken} />}
+            />
+            <Route
+              exact
+              path="/user/career_test/verbal_ability"
+              element={<VerbalAbility token={token} setToken={setToken} />}
+            />
+            <Route
+              exact
+              path="/user/career_test/Memory"
+              element={<Memory token={token} setToken={setToken} />}
             />
           </Routes>
         )}

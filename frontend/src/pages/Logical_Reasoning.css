@@ -1,0 +1,57 @@
+#container {
+    max-width: 70vmax;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+.flexwrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4vmax;
+}
+  .memoryquiz{
+    width: 80%;
+    height: 100vh;
+    position: relative;
+  }
+  #header {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .section-title {
+    font-size: 20px;
+    color: #333;
+    margin-top: 20px;
+  }
+  
+  .question-title {
+    font-size: 18px;
+    color: #333;
+    margin-top: 15px;
+  }
+  
+  .question-text {
+    font-size: 16px;
+    color: #666;
+    margin-top: 2px;
+  }
+  
+  .answer-options {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 2px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .answer-option {
+    margin-top:7px;
+    font-size: 16px;
+    color: #666;
+  }
+  
+  

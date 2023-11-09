@@ -1,0 +1,379 @@
+
+    [
+      {
+        "question": "ENORMOUS",
+        "options": ["Soft", "Average", "Tiny", "Weak"],
+        "answer": "c"
+      },
+      {
+        "question": "COMMISSIONED",
+        "options": ["Started", "Closed", "Finished", "Terminated"],
+        "answer": "d"
+      },
+      {
+        "question": "ARTIFICIAL",
+        "options": ["Red", "Natural", "Truthful", "Solid"],
+        "answer": "b"
+      },
+      {
+        "question": "EXODUS",
+        "options": ["Influx", "Home-coming", "Return", "Restoration"],
+        "answer": "a"
+      },
+      {
+        "question": "RELINQUISH",
+        "options": ["Abdicate", "Renounce", "Possess", "Deny"],
+        "answer": "c"
+      },
+      {
+        "question": "EXPAND",
+        "options": ["Convert", "Condense", "Congest", "Conclude"],
+        "answer": "b"
+      },
+      {
+        "question": "MORTAL",
+        "options": ["Divine", "Immortal", "Spiritual", "Eternal"],
+        "answer": "b"
+      },
+      {
+        "question": "QUIESCENT",
+        "options": ["ACTIVE", "Dormant", "Weak", "Unconcerned"],
+        "answer": "a"
+      },
+      {
+        "question": "OBEYING",
+        "options": ["Ordering", "Following", "Refusing", "Contradicting"],
+        "answer": "a"
+      },
+      {
+        "question": "FRAUDULENT",
+        "options": ["Candid", "Direct", "Forthright", "Genuine"],
+        "answer": "d"
+      },
+      {
+        "question": "FLAGITIOUS",
+        "options": ["Innocent", "Vapid", "Ignorant", "Frivolous"],
+        "answer": "a"
+      },
+      {
+        "question": "BELITTLE",
+        "options": ["Criticize", "Flatter", "Exaggerate", "Adore"],
+        "answer": "c"
+      },
+      {
+        "question": "STARTLED",
+        "options": ["Amused", "Relaxed", "Endless", "Astonished"],
+        "answer": "b"
+      },
+      {
+        "question": "BUSY",
+        "options": ["Occupied", "Engrossed", "Relaxed", "Engaged"],
+        "answer": "c"
+      },
+      {
+        "question": "FRESH",
+        "options": ["Faulty", "Sluggish", "Disgraceful", "Stale"],
+        "answer": "d"
+      },
+      {
+        "question": "CULPABLE",
+        "options": ["Defendable", "Blameless", "Careless", "Irresponsible"],
+        "answer": "b"
+      },
+      {
+        "question": "EVASIVE",
+        "options": ["Free", "Honest", "Liberal", "Frank"],
+        "answer": "b"
+      },
+      {
+        "question": "GREGARIOUS",
+        "options": ["Antisocial", "Glorious", "Horrendous", "Similar"],
+        "answer": "a"
+      },
+      {
+        "question": "AWARE",
+        "options": ["Uncertain", "Ignorant", "Sure", "Doubtful"],
+        "answer": "b"
+      },
+      {
+        "question": "HIRSUTE",
+        "options": ["Scaly", "Bald", "Erudite", "Quiet"],
+        "answer": "b"
+      },
+      {
+        "question": "SHRINK",
+        "options": ["Contract", "Spoil", "Expand", "Stretch"],
+        "answer": "c"
+      },
+      {
+        "question": "COMMON",
+        "options": ["Rare", "Small", "Petty", "Poor"],
+        "answer": "a"
+      },
+      {
+        "question": "COMFORT",
+        "options": ["Uncomfort", "Miscomfort", "Discomfort", "None Of These"],
+        "answer": "c"
+      },
+      {
+        "question": "DEAR",
+        "options": ["Priceless", "Free", "Worthless", "Cheap"],
+        "answer": "d"
+      },
+      {
+        "question": "ARROGANT",
+        "options": ["Humble", "Cowardly", "Egotistic", "Gentlemanly"],
+        "answer": "a"
+      },
+      {
+        "question": "VICTORIOUS",
+        "options": ["Defeated", "Annexed", "Destroyed", "Vanquished"],
+        "answer": "a"
+      },
+      {
+        "question": "GRACEFUL",
+        "options": ["Rough", "Expert", "Miserable", "Awkward"],
+        "answer": "d"
+      },
+      {
+        "question": "NADIR",
+        "options": ["Modernity", "Zenith", "Liberty", "Progress"],
+        "answer": "b"
+      },
+      {
+        "question": "EXTRAVAGANCE",
+        "options": ["Luxury", "Poverty", "Economical", "Cheapness"],
+        "answer": "c"
+      },
+      {
+        "question": "PERTINENT",
+        "options": ["Irrational", "Irregular", "Insistent", "Irrelevant"],
+        "answer": "d"
+      },
+      {
+        "question": "OBSCURE",
+        "options": ["Implicit", "Obnoxious", "Explicit", "Pedantic"],
+        "answer": "c"
+      },
+      {
+        "question": "URBANE",
+        "options": ["Illiterate", "Backward", "Discourteous", "Orthodox"],
+        "answer": "c"
+      },
+      {
+        "question": "VANITY",
+        "options": ["Pride", "Humility", "Conceit", "Ostentatious"],
+        "answer": "b"
+      },
+      {
+        "question": "RARELY",
+        "options": ["Hardly", "Definately", "Frequently", "Periodically"],
+        "answer": "c"
+      },
+      {
+        "question": "MALICIOUS",
+        "options": ["Kind", "Boastful", "Generous", "Indifferent"],
+        "answer": "a"
+      },
+      {
+        "question": "EPILOGUE",
+        "options": ["Dialogue", "Prelude", "Post script", "Epigram"],
+        "answer": "b"
+      },
+      {
+        "question": "CAPACIOUS",
+        "options": ["Limited", "Caring", "Foolish", "Changeable"],
+        "answer": "a"
+      },
+      {
+        "question": "CONDENSE",
+        "options": ["Expand", "Distribute", "Interpret", "Lengthen"],
+        "answer": "a"
+      },
+      {
+        "question": "ADAPTABLE",
+        "options": ["Adoptable", "Flexible", "Yielding", "Rigid"],
+        "answer": "d"
+      },
+      {
+        "question": "SACROSANCT",
+        "options": ["Irreligious", "Unethical", "Irreverent", "Unholy"],
+        "answer": "d"
+      },
+      {
+        "question": "INDISCREET",
+        "options": ["Reliable", "Honest", "Prudent", "Stupid"],
+        "answer": "c"
+      },
+      {
+        "question": "FAMILIAR",
+        "options": ["Unpleasant", "Dangerous", "Friendly", "Strange"],
+        "answer": "d"
+      },
+      {
+        "question": "TANGIBLE",
+        "options": ["Ethereal", "Concrete", "Actual", "Solid"],
+        "answer": "a"
+      },
+      {
+        "question": "LOVE",
+        "options": ["Villainy", "Hatred", "Compulsion", "Force"],
+        "answer": "b"
+      },
+      {
+        "question": "FAMOUS",
+        "options": ["Disgraced", "Unknown", "Evil", "Popular"],
+        "answer": "b"
+      },
+      {
+        "question": "ABSOLUTE",
+        "options": ["Deficient", "Faulty", "Limited", "Scarce"],
+        "answer": "c"
+      },
+      {
+        "question": "FRUGAL",
+        "options": ["Copious", "Extravagant", "Generous", "Ostentatious"],
+        "answer": "b"
+      },
+      {
+        "question": "INSIPID",
+        "options": ["Tasty", "Stupid", "Discreet", "Feast"],
+        "answer": "a"
+      },
+      {
+        "question": "ABLE",
+        "options": ["Disable", "Inable", "Unable", "Misable"],
+        "answer": "c"
+      },
+      {
+        "question": "HOSTILITY",
+        "options": ["Courtesy", "Hospitality", "Relationship", "Friendliness"],
+        "answer": "d"
+      },
+      {
+        "question": "CROWDED",
+        "options": ["Busy", "Congested", "Quiet", "Deserted"],
+        "answer": "d"
+      },
+      {
+        "question": "COMIC",
+        "options": ["Emotional", "Tragic", "Fearful", "Painful"],
+        "answer": "b"
+      },
+      {
+        "question": "HAPLESS",
+        "options": ["Cheerful", "Consistent", "Fortunate", "Shapely"],
+        "answer": "c"
+      },
+      {
+        "question": "FLIMSY",
+        "options": ["Frail", "Filthy", "Firm", "Flippant"],
+        "answer": "c"
+      },
+      {
+        "question": "EQUANIMITY",
+        "options": ["Resentment", "Dubiousness", "Duplicity", "Excitement"],
+        "answer": "d"
+      },
+      {
+        "question": "ADDITION",
+        "options": ["Division", "Enumeration", "Subtraction", "Multiplication"],
+        "answer": "c"
+      },
+      {
+        "question": "ZENITH",
+        "options": ["Acme", "Top", "Nadir", "Pinnacle"],
+        "answer": "c"
+      },
+      {
+        "question": "DOUBTFUL",
+        "options": ["Famous", "Certain", "Fixed", "Important"],
+        "answer": "b"
+      },
+      {
+        "question": "PERENNIAL",
+        "options": ["Frequent", "Regular", "Lasting", "Rare"],
+        "answer": "d"
+      },
+      {
+        "question": "BENIGN",
+        "options": ["Malevolent", "Soft", "Friendly", "Unwise"],
+        "answer": "a"
+      },
+      {
+        "question": "HINDRANCE",
+        "options": ["Aid", "Persuasion", "Cooperation", "Agreement"],
+        "answer": "a"
+      },
+      {
+        "question": "EXTRICATE",
+        "options": ["Manifest", "Palpable", "Release", "Entangle"],
+        "answer": "d"
+      },
+      {
+        "question": "REPRESS",
+        "options": ["Inhibit", "Liberate", "Curb", "Quell"],
+        "answer": "b"
+      },
+      {
+        "question": "ACQUITTED",
+        "options": ["Freed", "Burdened", "Convicted", "Entrusted"],
+        "answer": "c"
+      },
+      {
+        "question": "PROVOCATION",
+        "options": ["Vocation", "Pacification", "Peace", "Destruction"],
+        "answer": "b"
+      },
+      {
+        "question": "SUBSERVIENT",
+        "options": ["Aggressive", "Straightforward", "Dignified", "Supercilious"],
+        "answer": "c"
+      },
+      {
+        "question": "LEND",
+        "options": ["Borrow", "Cheat", "Pawn", "Hire"],
+        "answer": "a"
+      },
+      {
+        "question": "FAINT-HEARTED",
+        "options": ["Warm-hearted", "Full-blooded", "Hot-blooded", "Stout-hearted"],
+        "answer": "d"
+      },
+      {
+        "question": "REMISS",
+        "options": ["Forgetful", "Watchful", "Dutiful", "Harmful"],
+        "answer": "c"
+      },
+      {
+        "question": "TRANSPARENT",
+        "options": ["Semi-transparent", "Muddy", "Opaque", "Dark"],
+        "answer": "c"
+      },
+      {
+        "question": "HONORARY",
+        "options": ["Dishonorable", "Reputed", "Paid", "Official"],
+        "answer": "c"
+      },
+      {
+        "question": "METICULOUS",
+        "options": ["Mutual", "Shaggy", "Meretricious", "Slovenly"],
+        "answer": "d"
+      },
+      {
+        "question": "LOQUACIOUS",
+        "options": ["Reticent", "Talkative", "Garrulous", "Verbose"],
+        "answer": "a"
+      },
+      {
+        "question": "CONFESS",
+        "options": ["Deny", "Refuse", "Contest", "Contend"],
+        "answer": "a"
+      },
+      {
+        "question": "ANNOY",
+        "options": ["Praise", "Rejoice", "Please", "Reward"],
+        "answer": "c"
+      }
+    ]
+    

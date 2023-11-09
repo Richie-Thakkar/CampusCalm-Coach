@@ -1,0 +1,58 @@
+[
+    {
+      "question": "Tanya is older than Eric.\nCliff is older than Tanya.\nEric is older than Cliff.\nIf the first two statements are true, the third statement is",
+      "options": ["true", "false", "uncertain"],
+      "answer": "b"
+    },
+    {
+      "question": "Blueberries cost more than strawberries.\nBlueberries cost less than raspberries.\nRaspberries cost more than strawberries and blueberries.\nIf the first two statements are true, the third statement is",
+      "options": ["true", "false", "uncertain"],
+      "answer": "a"
+    },
+    {
+      "question": "All the trees in the park are flowering trees.\nSome of the trees in the park are dogwoods.\nAll dogwoods in the park are flowering trees.\nIf the first two statements are true, the third statement is",
+      "options": ["true", "false", "uncertain"],
+      "answer": "a"
+    },
+    {
+      "question": "Mara runs faster than Gail.\nLily runs faster than Mara.\nGail runs faster than Lily.\nIf the first two statements are true, the third statement is",
+      "options": ["true", "false", "uncertain"],
+      "answer": "b"
+    },
+    {
+      "question": "Apartments in the Riverdale Manor cost less than apartments in The Gaslight Commons.\nApartments in the Livingston Gate cost more than apartments in the The Gaslight Commons.\nOf the three apartment buildings, the Livingston Gate costs the most.\nIf the first two statements are true, the third statement is",
+      "options": ["true", "false", "uncertain"],
+      "answer": "a"
+    },
+    {
+      "question": "The Kingston Mall has more stores than the Galleria.\nThe Four Corners Mall has fewer stores than the Galleria.\nThe Kingston Mall has more stores than the Four Corners Mall.\nIf the first two statements are true, the third statement is",
+      "options": ["true", "false", "uncertain"],
+      "answer": "a"
+    },
+    {
+      "question": "All the tulips in Zoe's garden are white.\nAll the pansies in Zoe's garden are yellow.\nAll the flowers in Zoe's garden are either white or yellow\nIf the first two statements are true, the third statement is",
+      "options": ["true", "false", "uncertain"],
+      "answer": "c"
+    },
+    {
+      "question": "During the past year, Josh saw more movies than Stephen.\nStephen saw fewer movies than Darren.\nDarren saw more movies than Josh.\nIf the first two statements are true, the third statement is",
+      "options": ["true", "false", "uncertain"],
+      "answer": "c"
+    },
+    {
+      "question": "Rover weighs less than Fido.\nRover weighs more than Boomer.\nOf the three dogs, Boomer weighs the least.\nIf the first two statements are true, the third statement is",
+      "options": ["true", "false", "uncertain"],
+      "answer": "a"
+    },
+    {
+      "question": "All the offices on the 9th floor have wall-to-wall carpeting.\nNo wall-to-wall carpeting is pink.\nNone of the offices on the 9th floor has pink wall-to-wall carpeting.\nIf the first two statements are true, the third statement is",
+      "options": ["true", "false", "uncertain"],
+      "answer": "a"
+    },
+    {
+      "question": "Class A has a higher enrollment than Class B.\nClass C has a lower enrollment than Class B.\nClass A has a lower enrollment than Class C.\nIf the first two statements are true, the third statement is",
+      "options": ["true", "false", "uncertain"],
+      "answer": "b"
+    }
+  ]
+  

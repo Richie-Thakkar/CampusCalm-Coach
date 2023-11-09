@@ -1,0 +1,382 @@
+[
+    {
+      "question": "CORPULENT",
+      "options": ["Lean", "Gaunt", "Emaciated", "Obese"],
+      "answer": "d"
+    },
+    {
+      "question": "BRIEF",
+      "options": ["Limited", "Small", "Little", "Short"],
+      "answer": "d"
+    },
+    {
+      "question": "EMBEZZLE",
+      "options": ["Misappropriate", "Balance", "Remunerate", "Clear"],
+      "answer": "a"
+    },
+    {
+      "question": "VENT",
+      "options": ["Opening", "Stodge", "End", "Past tense of go"],
+      "answer": "a"
+    },
+    {
+      "question": "AUGUST",
+      "options": ["Common", "Ridiculous", "Dignified", "Petty"],
+      "answer": "c"
+    },
+    {
+      "question": "CANNY",
+      "options": ["Obstinate", "Handsome", "Clever", "Stout"],
+      "answer": "c"
+    },
+    {
+      "question": "ALERT",
+      "options": ["Energetic", "Observant", "Intelligent", "Watchful"],
+      "answer": "d"
+    },
+    {
+      "question": "WARRIOR",
+      "options": ["Soldier", "Sailor", "Pirate", "Spy"],
+      "answer": "a"
+    },
+    {
+      "question": "DISTANT",
+      "options": ["Far", "Removed", "Reserved", "Separate"],
+      "answer": "a"
+    },
+    {
+      "question": "ADVERSITY",
+      "options": ["Failure", "Helplessness", "Misfortune", "Crisis"],
+      "answer": "c"
+    },
+    {
+      "question": "FAKE",
+      "options": ["Original", "Imitation", "Trustworthy", "Loyal"],
+      "answer": "b"
+    },
+    {
+      "question": "INDICT",
+      "options": ["Condemn", "Reprimand", "Accuse", "Allege"],
+      "answer": "c"
+    },
+    {
+      "question": "STRINGENT",
+      "options": ["Dry", "Strained", "Rigorous", "Shrill"],
+      "answer": "c"
+    },
+    {
+      "question": "LAMENT",
+      "options": ["Complain", "Comment", "Condone", "Console"],
+      "answer": "a"
+    },
+    {
+      "question": "HESITATED",
+      "options": ["Stopped", "Paused", "Slowed", "Postponed"],
+      "answer": "b"
+    },
+    {
+      "question": "RESCUE",
+      "options": ["Command", "Help", "Defence", "Safety"],
+      "answer": "b"
+    },
+    {
+      "question": "ATTEMPT",
+      "options": ["Serve", "Explore", "Try", "Explain"],
+      "answer": "c"
+    },
+    {
+      "question": "FORAY",
+      "options": ["Maraud", "Contest", "Ranger", "Intuition"],
+      "answer": "a"
+    },
+    {
+      "question": "RECKLESS",
+      "options": ["Courageous", "Rash", "Bold", "Daring"],
+      "answer": "b"
+    },
+    {
+      "question": "CONSEQUENCES",
+      "options": ["Results", "Conclusions", "Difficulties", "Applications"],
+      "answer": "a"
+    },
+    {
+      "question": "IMPROVEMENT",
+      "options": ["Advancement", "Betterment", "Promotion", "Preference"],
+      "answer": "b"
+    },
+    {
+      "question": "INEBRIATE",
+      "options": ["Dreamy", "Stupefied", "Unsteady", "Drunken"],
+      "answer": "d"
+    },
+    {
+      "question": "STERILE",
+      "options": ["Barren", "Arid", "Childless", "Dry"],
+      "answer": "a"
+    },
+    {
+      "question": "ABJECT",
+      "options": ["Challenge", "Miserable", "Deny", "Disobey"],
+      "answer": "b"
+    },
+    {
+      "question": "MOVING",
+      "options": ["Taking", "Toying", "Shifting", "Turning"],
+      "answer": "c"
+    },
+    {
+      "question": "IRONIC",
+      "options": ["Inflexible", "Bitter", "Good-natured", "Disguisedly sarcastic"],
+      "answer": "d"
+    },
+    {
+      "question": "TIMID",
+      "options": ["Fast", "Slow", "Medium", "Shy"],
+      "answer": "d"
+    },
+    {
+      "question": "EXTRICATE",
+      "options": ["Pull", "Free", "Tie", "Complicate"],
+      "answer": "b"
+    },
+    {
+      "question": "NEUTRAL",
+      "options": ["Unbiased", "Non-aligned", "Undecided", "Indifferent"],
+      "answer": "a"
+    },
+    {
+      "question": "SHALLOW",
+      "options": ["Artificial", "Superficial", "Foolish", "Worthless"],
+      "answer": "b"
+    },
+    {
+      "question": "DIVERSION",
+      "options": ["Amusement", "Distortion", "Deviation", "Bylane"],
+      "answer": "c"
+    },
+    {
+      "question": "INSOLVENT",
+      "options": ["Poor", "Bankrupt", "Penniless", "Broke"],
+      "answer": "b"
+    },
+    {
+      "question": "INEXPLICABLE",
+      "options": ["Confusing", "Unaccountable", "Chaotic", "Unconnected"],
+      "answer": "b"
+    },
+    {
+      "question": "FEEBLE",
+      "options": ["Weak", "Vain", "Arrogant", "Sick"],
+      "answer": "a"
+    },
+    {
+      "question": "TRANSIENT",
+      "options": ["Transparent", "Fleeting", "Feeble", "Fanciful"],
+      "answer": "b"
+    },
+    {
+      "question": "BARE",
+      "options": ["Uncovered", "Tolerate", "Clear", "Neat"],
+      "answer": "a"
+    },
+    {
+      "question": "REPEAL",
+      "options": ["Sanction", "Perpetuate", "Pass", "Cancel"],
+      "answer": "d"
+    },
+    {
+      "question": "SALACITY",
+      "options": ["Bliss", "Depression", "Indecency", "Recession"],
+      "answer": "c"
+    },
+    {
+      "question": "ECSTATIC",
+      "options": ["Animated", "Bewildered", "Enraptured", "Illful"],
+      "answer": "c"
+    },
+    {
+      "question": "ADMONISH",
+      "options": ["Punish", "Curse", "Dismiss", "Reprimand"],
+      "answer": "d"
+    },
+    {
+      "question": "DILIGENT",
+      "options": ["Progressive", "Brilliant", "Inventive", "Hard-working"],
+      "answer": "d"
+    },
+    {
+      "question": "PIOUS",
+      "options": ["Pure", "Pretentious", "Clean", "Devout"],
+      "answer": "d"
+    },
+    {
+      "question": "BROWSE",
+      "options": ["Heal", "Deceive", "Examine", "Strike"],
+      "answer": "c"
+    },
+    {
+      "question": "INFREQUENT",
+      "options": ["Never", "Usual", "Rare", "Sometimes"],
+      "answer": "c"
+    },
+    {
+      "question": "RESTRAINT",
+      "options": ["Hindrance", "Repression", "Obstacle", "Restriction"],
+      "answer": "d"
+    },
+    {
+      "question": "DEIFY",
+      "options": ["Flatter", "Challenge", "Worship", "Face"],
+      "answer": "c"
+    },
+    {
+      "question": "HARBINGER",
+      "options": ["Messenger", "Steward", "Forerunner", "Pilot"],
+      "answer": "c"
+    },
+    {
+      "question": "VENUE",
+      "options": ["Place", "Agenda", "Time", "Duration"],
+      "answer": "a"
+    },
+    {
+      "question": "CANDID",
+      "options": ["Apparent", "Explicit", "Frank", "Bright"],
+      "answer": "c"
+    },
+    {
+      "question": "MELD",
+      "options": ["To soothe", "Merge", "Purchase", "Glisten"],
+      "answer": "b"
+    },
+    {
+      "question": "LYNCH",
+      "options": ["Hang", "Madden", "Kill", "Shoot"],
+      "answer": "c"
+    },
+    {
+      "question": "TORTURE",
+      "options": ["Torment", "Chastisement", "Harassment", "Terror"],
+      "answer": "a"
+    },
+    {
+      "question": "ABUNDANT",
+      "options": ["Ripe", "Cheap", "Plenty", "Absent"],
+      "answer": "c"
+    },
+    {
+      "question": "ENTIRE",
+      "options": ["Part", "Quarter", "Whole", "Half"],
+      "answer": "c"
+    },
+    {
+      "question": "DESTITUTION",
+      "options": ["Humility", "Moderation", "Poverty", "Beggary"],
+      "answer": "c"
+    },
+    {
+      "question": "WRETCHED",
+      "options": ["Poor", "Foolish", "Insane", "Strained"],
+      "answer": "a"
+    },
+    {
+      "question": "INTIMIDATE",
+      "options": ["To hint", "Frighten", "Bluff", "Harass"],
+      "answer": "b"
+    },
+    {
+      "question": "CANTANKEROUS",
+      "options": ["Quarrelsome", "Rash", "Disrespectful", "Noisy"],
+      "answer": "a"
+    },
+    {
+      "question": "RANT",
+      "options": ["Praise inordinately", "Formalise", "To preach noisily", "Treat with screen"],
+      "answer": "c"
+    },
+    {
+      "question": "ZANY",
+      "options": ["Clown", "Pet", "Thief", "Magician"],
+      "answer": "a"
+    },
+    {
+      "question": "TACITURNITY",
+      "options": ["Dumbness", "Changeablemess", "Hesitation", "Reserve"],
+      "answer": "d"
+    },
+    {
+      "question": "MASSACRE",
+      "options": ["Murder", "Stab", "Assassinate", "Slaughter"],
+      "answer": "d"
+    },
+    {
+      "question": "KEN",
+      "options": ["Ignorance", "Witness", "Trial", "Knowledge"],
+      "answer": "d"
+    },
+    {
+      "question": "WARY",
+      "options": ["Sad", "vigilant", "Distorted", "Tired"],
+      "answer": "b"
+    },
+    {
+      "question": "RABBLE",
+      "options": ["Mob", "Noise", "Roar", "Rubbish"],
+      "answer": "a"
+    },
+    {
+      "question": "MAYHEM",
+      "options": ["Jubilation", "Havoc", "Excitement", "Defeat"],
+      "answer": "b"
+    },
+    {
+      "question": "PONDER",
+      "options": ["Think", "Evaluate", "Anticipate", "Increase"],
+      "answer": "a"
+    },
+    {
+      "question": "CONNOISSEUR",
+      "options": ["Ignorant", "Lover of art", "Interpreter", "Delinquent"],
+      "answer": "b"
+    },
+    {
+      "question": "SHIVER",
+      "options": ["Feel", "Rock", "Tremble", "Move"],
+      "answer": "c"
+    },
+    {
+      "question": "PRESTIGE",
+      "options": ["Influence", "Quality", "Name", "Wealth"],
+      "answer": "c"
+    },
+    {
+      "question": "STRINGENT",
+      "options": ["Tense", "Stringly", "Strict", "Causing to Shrink"],
+      "answer": "c"
+    },
+    {
+      "question": "INSOMNIA",
+      "options": ["Lethargy", "Sleeplessness", "Drunkenness", "Unconsciousness"],
+      "answer": "b"
+    },
+    {
+      "question": "LAUD",
+      "options": ["Lord", "Eulogy", "Praise", "Extolled"],
+      "answer": "c"
+    },
+    {
+      "question": "REPERCUSSION",
+      "options": ["Clever reply", "Recollection", "Remuneration", "Reaction"],
+      "answer": "d"
+    },
+    {
+      "question": "IMPROMPTU",
+      "options": ["Offhand", "Unimportant", "Unreal", "Effective"],
+      "answer": "a"
+    },
+    {
+      "question": "FRUGALITY",
+      "options": ["Foolishness", "Extremity", "Enthusiasm", "Economy"],
+      "answer": "d"
+    }
+]
