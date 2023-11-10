@@ -57,6 +57,8 @@ RUN python -m pip install tensorflow-intel
 RUN python -m pip install pybase64
 RUN python -m pip install pickle5
 RUN python -m pip install flask-cors
+RUN python -m pip install openai
+
 
 # Switch to the non-privileged user to run the application.
 USER appuser

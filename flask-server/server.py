@@ -10,6 +10,7 @@ from passlib.hash import sha256_crypt
 from flask_jwt_extended import create_access_token,get_jwt,get_jwt_identity,unset_jwt_cookies, jwt_required, JWTManager
 from flask_cors import CORS, cross_origin
 import base64,openai
+import pickle
 openai.api_key = os.getenv("API_KEY")
 app = Flask(__name__)
 CORS(app,supports_credentials=True)
@@ -58,6 +59,21 @@ def refresh_expiring_jwts(response):
     except (RuntimeError, KeyError):
         # Case where there is not a valid JWT. Just return the original respone
         return response
+
+@app.route('/career',methods=['POST'])
+@cross_origin(supports_credentials=True)
+def career():
+    LR_score = request.json['LR_Score']
+    VA_score = request.json['VA_Score']
+    AR_Score = request.json['AR_Score']
+    Memory = request.json['Memory']
+    # rand = pickle.load('./models/rand.txt')
+    svm = pickle.load('./models/svm.txt')
+    dt = pickle.load('./models/dt.txt')
+    nb = pickle.load('./models/nb.txt')
+    career = {}
+    career.
+
 
 @app.route('/login',methods=['POST'])
 @cross_origin(supports_credentials=True)
