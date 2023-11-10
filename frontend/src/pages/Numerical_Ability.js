@@ -115,7 +115,7 @@ const NumericalAbility = () => {
           </div>
         ))}
         {showResults ? (
-          <div className='btdiv'><NavLink to='/user/moodTest'><button type='submit' className='startButton'>Go to next Assesment</button></NavLink></div>
+          <div className='btdiv'><NavLink to='/user/career_test/verbal_ability'><button type='submit' className='startButton'>Go to next Assesment</button></NavLink></div>
         ) : (
           <div className='btdiv'><button className='startButton' onClick={calculateScore}>Submit Test</button></div>
         )}

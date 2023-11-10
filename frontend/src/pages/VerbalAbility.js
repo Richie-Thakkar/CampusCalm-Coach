@@ -112,7 +112,7 @@ const VerbalAbility = () => {
           </div>
         ))}
         {showResults ? (
-          <div className='btdiv'><NavLink to='/user/moodTest'><button type='submit' className='startButton'>Go to next Assesment</button></NavLink></div>
+          <div className='btdiv'><NavLink to='/user/career_test/Memory'><button type='submit' className='startButton'>Go to next Assesment</button></NavLink></div>
         ) : (
           <div className='btdiv'><button className='startButton' onClick={calculateScore}>Submit Test</button></div>
         )}
