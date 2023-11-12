@@ -80,7 +80,7 @@ const LogicalReasoning = () => {
     }
     setScore(calculatedScore);
     setShowResults(true);
-    sessionStorage.setItem("LR_Score",{score});
+    sessionStorage.setItem("LR_Score",score);
           
   };
   

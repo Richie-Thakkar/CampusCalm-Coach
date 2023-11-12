@@ -23,7 +23,7 @@ function UseToken() {
 
   return {
     setToken: saveToken,
-    token,
+    token, 
     removeToken,
   };
 }

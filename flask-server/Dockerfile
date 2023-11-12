@@ -58,6 +58,7 @@ RUN python -m pip install pybase64
 RUN python -m pip install pickle5
 RUN python -m pip install flask-cors
 RUN python -m pip install openai
+RUN python -m pip install scikit-learn==1.2.2
 
 
 # Switch to the non-privileged user to run the application.

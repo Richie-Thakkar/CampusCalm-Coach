@@ -71,7 +71,7 @@ const VerbalAbility = () => {
     }
     setScore(calculatedScore);
     setShowResults(true);
-    sessionStorage.setItem("VA_Score",{score});
+    sessionStorage.setItem("VA_Score",score);
           
   };
   

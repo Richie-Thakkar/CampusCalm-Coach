@@ -63,16 +63,26 @@ def refresh_expiring_jwts(response):
 @app.route('/career',methods=['POST'])
 @cross_origin(supports_credentials=True)
 def career():
-    LR_score = request.json['LR_Score']
-    VA_score = request.json['VA_Score']
-    AR_Score = request.json['AR_Score']
-    Memory = request.json['Memory']
+    LR_score = int(request.json['LR_Score'])
+    VA_score = int(request.json['VA_Score'])
+    AR_Score = int(request.json['AR_Score'])
+    Memory = int(request.json['mem'])
     # rand = pickle.load('./models/rand.txt')
-    svm = pickle.load('./models/svm.txt')
-    dt = pickle.load('./models/dt.txt')
-    nb = pickle.load('./models/nb.txt')
-    career = {}
-    #career.
+    #report = [[75,50,10,10]]
+    report = [[LR_score,VA_score,AR_Score,Memory]]
+    svm = pickle.load(open('./models/svm.txt','rb'))
+    dt = pickle.load(open('./models/dt.txt','rb'))
+    nb = pickle.load(open('./models/nb.txt','rb'))
+    career = set()
+    print(svm.predict(report))
+    print(dt.predict(report))
+    print(nb.predict(report))
+    career.add(svm.predict(report)[0])
+    career.add(dt.predict(report)[0])
+    career.add(nb.predict(report)[0])
+    career = list(career)
+    print(career)
+    return jsonify(career)
 
 
 @app.route('/login',methods=['POST'])
