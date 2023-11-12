@@ -72,7 +72,7 @@ def career():
     dt = pickle.load('./models/dt.txt')
     nb = pickle.load('./models/nb.txt')
     career = {}
-    career.
+    #career.
 
 
 @app.route('/login',methods=['POST'])
