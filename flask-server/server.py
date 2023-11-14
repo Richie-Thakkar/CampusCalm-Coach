@@ -11,6 +11,11 @@ from flask_jwt_extended import create_access_token,get_jwt,get_jwt_identity,unse
 from flask_cors import CORS, cross_origin
 import base64,openai
 import pickle
+import tensorflow as tf
+from tensorflow.keras.models import load_model
+import numpy as np
+import base64,io,cv2
+from PIL import Image
 openai.api_key = os.getenv("API_KEY")
 app = Flask(__name__)
 CORS(app,supports_credentials=True)
@@ -59,6 +64,26 @@ def refresh_expiring_jwts(response):
     except (RuntimeError, KeyError):
         # Case where there is not a valid JWT. Just return the original respone
         return response
+
+@app.route('/emotion',methods=['POST'])
+@cross_origin(supports_credentials=True)
+def getEmotion():
+    model = load_model('./models/emotion_model.h5')
+    image = request.json['image']
+    image = Image.open(io.BytesIO(base64.decodebytes(bytes(image,"utf-8"))))
+    image.save('tmp.png')
+    image = cv2.imread('tmp.png')
+    image = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
+    image = cv2.resize(image,(48,48))
+    image = np.array(image)
+    image = np.expand_dims(image,axis=0)
+    image = image/255
+    resp = model.predict(image)
+    print(resp)
+    predicted_class = np.argmax(resp)
+    class_names = ['positive','negative','neutral']
+    return jsonify({'prediction':class_names[predicted_class]})
+
 
 @app.route('/career',methods=['POST'])
 @cross_origin(supports_credentials=True)

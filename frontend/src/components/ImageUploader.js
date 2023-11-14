@@ -44,7 +44,7 @@ const ImageUploader = ({ onUploadSuccess }) => {
   };
 
   const saveImageToBackend = async (base64String) => {
-    const url = 'https://hydra-ai.p.rapidapi.com/dev/faces/analyse/';
+    const url = `${process.env.REACT_APP_BACKEND_URL}/emotion`;
     const options = {
       method: 'POST',
       headers: {
