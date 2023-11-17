@@ -29,6 +29,7 @@ RUN adduser \
     appuser
 RUN apt-get update
 RUN apt-get install python3-dev default-libmysqlclient-dev build-essential -y
+#RUN apt-get install ffmpeg libsm6 libxext6 --fix-missing -y
 # Download dependencies as a separate step to take advantage of Docker's caching.
 # Leverage a cache mount to /root/.cache/pip to speed up subsequent builds.
 # Leverage a bind mount to requirements.txt to avoid having to copy them into
@@ -47,7 +48,6 @@ RUN python -m pip install Flask-Session
 RUN python -m pip install gunicorn
 RUN python -m pip install keras
 RUN python -m pip install numpy
-RUN python -m pip install opencv-python
 RUN python -m pip install passlib
 RUN python -m pip install Pillow
 RUN python -m pip install PyJWT
@@ -59,10 +59,10 @@ RUN python -m pip install pickle5
 RUN python -m pip install flask-cors
 RUN python -m pip install openai
 RUN python -m pip install scikit-learn==1.2.2
-
+RUN python -m pip install opencv-python-headless
 
 # Switch to the non-privileged user to run the application.
-USER appuser
+# USER appuser
 
 # Copy the source code into the container.
 COPY . .

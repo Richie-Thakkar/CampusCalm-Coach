@@ -84,6 +84,30 @@ def getEmotion():
     class_names = ['positive','negative','neutral']
     return jsonify({'prediction':class_names[predicted_class]})
 
+@app.route('/likes',methods=['POST'])
+@cross_origin(supports_credentials=True)
+def likes():
+    like = request.get_json()
+    like = [like]
+    print(like)
+    svm = pickle.load(open('./models/likes/svm.txt','rb'))
+    dt = pickle.load(open('./models/likes/dt.txt','rb'))
+    gb = pickle.load(open('./models/likes/gb.txt','rb'))
+    knn = pickle.load(open('./models/likes/knn.txt','rb'))
+    lr = pickle.load(open('./models/likes/lr.txt','rb'))
+    nb = pickle.load(open('./models/likes/nb.txt','rb'))
+    rand = pickle.load(open('./models/likes/rand.txt','rb'))
+    career = set()
+    career.add(svm.predict(like)[0])
+    career.add(dt.predict(like)[0])
+    career.add(gb.predict(like)[0])
+    career.add(knn.predict(like)[0])
+    career.add(lr.predict(like)[0])
+    career.add(nb.predict(like)[0])
+    career.add(rand.predict(like)[0])
+    career = list(career)
+    print(career)
+    return jsonify(career)
 
 @app.route('/career',methods=['POST'])
 @cross_origin(supports_credentials=True)

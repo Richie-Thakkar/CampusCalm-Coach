@@ -25,6 +25,7 @@ import Logical_Reasoning from "./pages/Logical_Reasoning.1";
 import NumericalAbility from "./pages/Numerical_Ability";
 import VerbalAbility from "./pages/VerbalAbility";
 import Memory from "./pages/Memory";
+import Likes from "./pages/Likes"
 function App() {
   const { token, removeToken, setToken } = UseToken();
 
@@ -145,6 +146,11 @@ function App() {
               exact
               path="/user/career_test/Memory"
               element={<Memory token={token} setToken={setToken} />}
+            /> 
+	    <Route
+              exact
+              path="/user/career_test/likes"
+              element={<Likes token={token} setToken={setToken} />}
             />
           </Routes>
         )}
