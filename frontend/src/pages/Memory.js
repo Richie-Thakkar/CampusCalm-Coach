@@ -25,6 +25,7 @@ function Memory()
             onChange={(e) => setMem(e.target.value)}
             onKeyPress={(e) => {
               if (e.key === "Enter") {
+		      sessionStorage.setItem('Mem_Score',mem)
  	fetch(`${process.env.REACT_APP_BACKEND_URL}/career`,{
             method: "POST",
             headers:{
@@ -34,6 +35,7 @@ function Memory()
                 body: JSON.stringify(report),
             credentials: 'include',
         })
+	.then((data) => sessionStorage.setItem("career2",data))
         .catch((error) => console.error(error))
 
               }

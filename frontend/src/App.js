@@ -26,6 +26,8 @@ import NumericalAbility from "./pages/Numerical_Ability";
 import VerbalAbility from "./pages/VerbalAbility";
 import Memory from "./pages/Memory";
 import Likes from "./pages/Likes"
+import CareerReport from "./pages/CareerReport"
+
 function App() {
   const { token, removeToken, setToken } = UseToken();
 
@@ -152,7 +154,13 @@ function App() {
               path="/user/career_test/likes"
               element={<Likes token={token} setToken={setToken} />}
             />
-          </Routes>
+
+	    <Route
+              exact
+		path="/user/career_test/report"
+		element={<CareerReport token={token} setToken={setToken}/>}
+          />
+		</Routes>
         )}
       </div>
     </BrowserRouter>
