@@ -16,7 +16,6 @@ function Likes(){
   };
   const calculateScore = () => {
     console.log(selectedOptions)
-	  sessionStorage.setItem("likes",selectedOptions);
     fetch(`${process.env.REACT_APP_BACKEND_URL}/likes`,{
 	method: "POST",
 	headers:{
@@ -26,6 +25,7 @@ function Likes(){
 	body: JSON.stringify(selectedOptions),
 	credentials: 'include',
     })
+	  .then((data) => {console.log(data);sessionStorage.setItem("career",data)})
 	.catch((error) => console.error(error))
   };
   

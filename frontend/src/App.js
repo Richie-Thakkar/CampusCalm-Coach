@@ -30,6 +30,8 @@ import AD from "./pages/AdminDashboard";
 import AB from "./pages/AdminBlogs";
 import AP from "./pages/AdminPsy";
 import AdminBlog from "./pages/AdminBlog";
+import CareerReport from "./pages/CareerReport"
+
 function App() {
   const { token, removeToken, setToken } = UseToken();
 
@@ -156,6 +158,12 @@ function App() {
               path="/user/career_test/likes"
               element={<Likes token={token} setToken={setToken} />}
             />
+
+	    <Route
+              exact
+		path="/user/career_test/report"
+		element={<CareerReport token={token} setToken={setToken}/>}
+          />
             <Route
               exact
               path="/admin/dashboard"
@@ -177,7 +185,7 @@ function App() {
               element={<AdminBlog token={token} setToken={setToken} />}
             />
             
-          </Routes>
+		</Routes>
         )}
       </div>
     </BrowserRouter>
