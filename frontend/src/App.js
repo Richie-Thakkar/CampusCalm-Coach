@@ -15,7 +15,6 @@ import Consultpsy from "./pages/Consultpsy";
 import UseToken from "./components/UseToken";
 import ForgotPassword from "./pages/ForgotPassword";
 import UserProfile from "./pages/UserProfile";
-import CareerTests from "./pages/CareerTests";
 import Blogs from "./pages/Blogs";
 import Blog from "./pages/Blog";
 import PsyBlog from "./pages/PsyBlog";
@@ -102,7 +101,7 @@ function App() {
             <Route
               exact
               path="/user/CareerTests"
-              element={<CareerTests token={token} setToken={setToken} />}
+              element={<Logical_Reasoning token={token} setToken={setToken} />}
             />
             <Route
               exact

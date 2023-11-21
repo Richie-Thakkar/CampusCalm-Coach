@@ -10,6 +10,12 @@ const App = () =>{
 		{id:2,label:'Numerical Ability',value:parseInt(sessionStorage.getItem("AR_Score"))},
 		{id:3,label:'Memory',value:parseInt(sessionStorage.getItem("Mem_Score"))}
 	]
+	const ar1 = JSON.parse(sessionStorage.getItem("career"))
+	console.log(ar1)
+	const careers = [
+		...JSON.parse(sessionStorage.getItem("career")),
+		...JSON.parse(sessionStorage.getItem("career2"))
+	]
 	return (
 		<div>
 		<Navbar />
@@ -28,7 +34,10 @@ const App = () =>{
 				fontweight:'bold',
 			},}}
 		width={800} height={750}/>
-		<Footer />
+		{careers.map(career => {<section className="TestSection">
+				<button className="startButton1" style={{ marginTop: '1vmax' }}> Logical Reasoning</button>				</section>
+
+		})}		<Footer />
 		</div>
 	)
 }

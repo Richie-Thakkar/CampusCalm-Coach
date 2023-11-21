@@ -12,39 +12,43 @@ function Memory()
 	const LR_Score = sessionStorage.getItem("LR_Score")
 	const VA_Score = sessionStorage.getItem("VA_Score")
 	const report = {LR_Score,AR_Score,VA_Score,mem}
-    return(
-        <>
-        <Navbar/>
-        <div className="flexwrapper">
-        <iframe src="https://practicalpie.com/free-memory-test/#memorytest" frameborder="100" className="memoryquiz"></iframe>
-        </div>
-	      <input
-            type="text"
-            placeholder="Give your Score..."
-            value={mem}
-            onChange={(e) => setMem(e.target.value)}
-            onKeyPress={(e) => {
-              if (e.key === "Enter") {
-		      sessionStorage.setItem('Mem_Score',mem)
- 	fetch(`${process.env.REACT_APP_BACKEND_URL}/career`,{
-            method: "POST",
-            headers:{
-                "Content-Type": "application/json",
-                Authorization:"Bearer" + sessionStorage.getItem("token"),
-            },
-                body: JSON.stringify(report),
-            credentials: 'include',
-        })
-	.then((data) => sessionStorage.setItem("career2",data))
-        .catch((error) => console.error(error))
+	const func = () => {
 
-              }
-            }}
-          />
+	}
+	return(
+		<>
+		<Navbar/>
+		<div className="flexwrapper">
+		<iframe src="https://practicalpie.com/free-memory-test/#memorytest" frameborder="100" className="memoryquiz"></iframe>
+		</div>
+		<input
+		type="text"
+		placeholder="Give your Score..."
+		value={mem}
+		onChange={(e) => setMem(e.target.value)}
+		onKeyPress={(e)=>{if(e.key === "Enter"){sessionStorage.setItem('Mem_Score',mem);
+			fetch(`${process.env.REACT_APP_BACKEND_URL}/career`,{
+				method: "POST",
+				headers:{
+					"Content-Type": "application/json",
+					Authorization:"Bearer" + sessionStorage.getItem("token"),
+				},
+				body: JSON.stringify(report),
+				credentials: 'include',
+			})
+				.then((response)=>{
+					if(!response.ok) throw new Error('Network response was not ok')
+					return response.json()
+				})
+				.then((data) => sessionStorage.setItem("career2",JSON.stringify(data)))
+				.catch((error) => console.error(error))
+		}}
+		}
+		/>
 
-		 <div className='btdiv'><NavLink to='/user/moodTest'><button type='submit' className='startButton'>Go to next Assesment</button></NavLink></div>
-        <Footer/>
-        </>
-    )
+		<div className='btdiv'><NavLink to='/user/career_test/likes'><button type='submit' className='startButton'>Go to next Assesment</button></NavLink></div>
+		<Footer/>
+		</>
+	)
 }
 export default Memory;
