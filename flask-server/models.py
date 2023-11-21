@@ -8,7 +8,7 @@ class Table:
             
     def getone(self, search, value):
         cur = mysql.connection.cursor()
-        result = cur.execute("SELECT Email_ID,Password FROM %s WHERE %s = \"%s\"" %(self.table, search, value))
+        result = cur.execute("SELECT Email_ID,Password,user_type FROM %s WHERE %s = \"%s\"" %(self.table, search, value))
         if result > 0: 
             data = {}; 
             data = cur.fetchone()
@@ -64,6 +64,25 @@ class Table:
         cur.close()
         
         return result
+    
+    def deleteOne(self, search, value):
+        cur = mysql.connection.cursor()
+        query = f"DELETE FROM {self.table} WHERE {search} = %s"
+        
+        cur.execute(query, (value,))
+        mysql.connection.commit()
+
+        # Check if any rows were affected by the deletion
+        if cur.rowcount > 0:
+            # Optionally fetch data if needed, but deletion typically doesn't return data
+            # data = cur.fetchone()
+            cur.close()
+            return True  # Or return any desired success indication
+        else:
+            cur.close()
+            return False  # Or return any desired failure indication
+
+
 
         
         

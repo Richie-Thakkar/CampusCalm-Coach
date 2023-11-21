@@ -10,7 +10,8 @@ const App = () =>{
 		{id:2,label:'Numerical Ability',value:parseInt(sessionStorage.getItem("AR_Score"))},
 		{id:3,label:'Memory',value:parseInt(sessionStorage.getItem("Mem_Score"))}
 	]
-	const ar1 = JSON.parse(sessionStorage.getItem("career"))
+	var ar1 = sessionStorage.getItem("career")
+	ar = ar1.substring(1,ar1.length()-2).split(',')
 	console.log(ar1)
 	const careers = [
 		...JSON.parse(sessionStorage.getItem("career")),

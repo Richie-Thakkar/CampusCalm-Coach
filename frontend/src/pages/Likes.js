@@ -5,7 +5,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
-function PHQ9(){
+function Likes(){
 	const [selectedOptions, setSelectedOptions] = useState([]);
 
 	const handleOptionSelect = (questionId, option) => {
@@ -212,4 +212,4 @@ function PHQ9(){
 		</section>
 	)
 }
-export default PHQ9
+export default Likes

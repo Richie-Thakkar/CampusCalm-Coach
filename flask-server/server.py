@@ -12,7 +12,9 @@ from flask_cors import CORS, cross_origin
 import base64,openai
 import pickle
 import tensorflow as tf
-from tensorflow.keras.models import load_model
+from tensorflow import keras
+from keras.layers import Dense
+from keras.models import Sequential, load_model
 import numpy as np
 import base64,io,cv2
 from PIL import Image
@@ -152,9 +154,47 @@ def login():
             return jsonify(status="Invalid Password")
         else:
             access_token = create_access_token(identity=email)
-            response=make_response(jsonify(status="Auth Success!",atk=access_token))
+            ut=user[2]
+            response=make_response(jsonify(status="Auth Success!",atk=access_token,user_type=ut))
             response.set_cookie('access_token',access_token)
             return response
+
+@app.route('/deleteUser',methods=['POST'])
+@cross_origin(supports_credentials=True)
+def deleteUser():
+    users=models.Table("users","Email_Id")
+    email=request.json["Email_Id"]
+    result=users.deleteOne("Email_Id",email)
+    print(result)
+    if result==True:
+        return jsonify(status="success")
+    else:
+        return jsonify(status="failure")
+
+@app.route('/deleteBlog',methods=['POST'])
+@cross_origin(supports_credentials=True)
+def deleteBlog():
+    blogs=models.Table("blogs","Id")
+    id=request.json["Id"]
+    result=blogs.deleteOne("id",id)
+    print(result)
+    if result==True:
+        return jsonify(status="success")
+    else:
+        return jsonify(status="failure")
+
+@app.route('/deletePsy',methods=['POST'])
+@cross_origin(supports_credentials=True)
+def deletePsy():
+    psy=models.Table("psy","Id")
+    id=request.json["Id"]
+    result=psy.deleteOne("id",id)
+    print(result)
+    if result==True:
+        return jsonify(status="success")
+    else:
+        return jsonify(status="failure")
+
 
 @app.route('/chatbot', methods=['POST'])
 @cross_origin(supports_credentials=True)
@@ -202,6 +242,20 @@ def check():
             return resp
         else:
             return jsonify(status="Not found")
+
+@app.route('/getUsers',methods=['POST'])
+@cross_origin(supports_credentials=True)
+def getUsers():
+    token = verify_jwt_token()
+    if not token:
+        return jsonify(message='Invalid or expired JWT token'), 401
+    users=models.Table("users","Email_ID","FirstName","LastName","Institution","Class","Stream","Specialty","DOB","user_type")
+    results=users.getall(1,1)
+    if results is None:
+        return jsonify([])
+    return jsonify(results) 
+   
+
 
 @app.route('/getHash',methods=['POST'])
 @cross_origin(supports_credentials=True)
@@ -294,7 +348,8 @@ def signup():
         "FirstName": FirstName,
         "LastName": LastName,
         "Email_ID": Email_ID,
-        "Password": hashed_password
+        "Password": hashed_password,
+        "user_type":0
     }
     users.insert(user_data)
     
@@ -373,6 +428,8 @@ def get_Post():
     post = models.Table("Blogs", "title", "author", "Publication_date", "tags", "Description", "Subtitle", "Body", "Image")
     results = post.getall("1", "1")
     
+    if results is None:
+        return jsonify([])
     # Modify the fetched data and create a new list with modified elements
     modified_data = []
     for rs in results:

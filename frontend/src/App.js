@@ -24,7 +24,11 @@ import Logical_Reasoning from "./pages/Logical_Reasoning.1";
 import NumericalAbility from "./pages/Numerical_Ability";
 import VerbalAbility from "./pages/VerbalAbility";
 import Memory from "./pages/Memory";
-import Likes from "./pages/Likes"
+import Likes from "./pages/Likes";
+import AD from "./pages/AdminDashboard";
+import AB from "./pages/AdminBlogs";
+import AP from "./pages/AdminPsy";
+import AdminBlog from "./pages/AdminBlog";
 import CareerReport from "./pages/CareerReport"
 
 function App() {
@@ -148,7 +152,7 @@ function App() {
               path="/user/career_test/Memory"
               element={<Memory token={token} setToken={setToken} />}
             /> 
-	    <Route
+	          <Route
               exact
               path="/user/career_test/likes"
               element={<Likes token={token} setToken={setToken} />}
@@ -159,6 +163,27 @@ function App() {
 		path="/user/career_test/report"
 		element={<CareerReport token={token} setToken={setToken}/>}
           />
+            <Route
+              exact
+              path="/admin/dashboard"
+              element={<AD token={token} setToken={setToken} />}
+            />
+            <Route
+              exact
+              path="/admin/blogs"
+              element={<AB token={token} setToken={setToken} />}
+            />
+            <Route
+              exact
+              path="/admin/psy"
+              element={<AP token={token} setToken={setToken} />}
+            />
+            <Route
+              exact
+              path="/admin/adminblog"
+              element={<AdminBlog token={token} setToken={setToken} />}
+            />
+            
 		</Routes>
         )}
       </div>
