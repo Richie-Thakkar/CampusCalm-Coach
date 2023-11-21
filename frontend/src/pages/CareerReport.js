@@ -2,7 +2,8 @@ import React from 'react';
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { PieChart,pieArcLabelClasses } from '@mui/x-charts/PieChart';
-
+import "./CareerTests.css"
+import "./MoodTest.css"
 const App = () =>{
 	const data = [
 		{id:0,label:'Logical Reasoning',value:parseInt(sessionStorage.getItem("LR_Score"))},
@@ -11,15 +12,17 @@ const App = () =>{
 		{id:3,label:'Memory',value:parseInt(sessionStorage.getItem("Mem_Score"))}
 	]
 	var ar1 = sessionStorage.getItem("career")
-	ar = ar1.substring(1,ar1.length()-2).split(',')
-	console.log(ar1)
+	ar1 = ar1.substring(1,ar1.length-2).split(',')
+	var ar2 = sessionStorage.getItem("career2")
+	ar2 = ar2.substring(1,ar2.length-2).split(',')
 	const careers = [
-		...JSON.parse(sessionStorage.getItem("career")),
-		...JSON.parse(sessionStorage.getItem("career2"))
+		...ar1,
+		...ar2
 	]
 	return (
 		<div>
 		<Navbar />
+		<span className="mtheading">Pie Chart</span>
 		<PieChart series={[
 			{
 				arcLabel:(item) => `${item.value} %`,
@@ -35,10 +38,11 @@ const App = () =>{
 				fontweight:'bold',
 			},}}
 		width={800} height={750}/>
-		{careers.map(career => {<section className="TestSection">
-				<button className="startButton1" style={{ marginTop: '1vmax' }}> Logical Reasoning</button>				</section>
+		<span className="mtheading">Careers Suggested according to the test scores and likes</span>
+		{careers.map((career) => {<section className="TestSection">
+				<button className="startButton1" style={{ marginTop: '1vmax' }}> {career} </button></section>
 
-		})}		<Footer />
+		))}		<Footer />
 		</div>
 	)
 }
