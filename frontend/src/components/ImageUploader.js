@@ -62,18 +62,18 @@ const ImageUploader = ({ onUploadSuccess }) => {
       const result = await response.json();
       console.log(base64String);
       console.log(result);
-      if (result.body.ndetected_faces > 0) {
-        const emotions = result.body.detected_faces[0].info.emotions;
-        const maxEmotion = Object.keys(emotions).reduce((prevEmotion, currEmotion) => {
-          return emotions[currEmotion] > emotions[prevEmotion] ? currEmotion : prevEmotion;
-        });
-        console.log(maxEmotion);
-        sessionStorage.setItem("Mood",maxEmotion);
-        setIsResponseSuccessful(true);
-        onUploadSuccess(); 
-      } else {
-        setIsResponseSuccessful(false);
-      }
+      // if (result.body.ndetected_faces > 0) {
+      //   const emotions = result.body.detected_faces[0].info.emotions;
+      //   const maxEmotion = Object.keys(emotions).reduce((prevEmotion, currEmotion) => {
+      //     return emotions[currEmotion] > emotions[prevEmotion] ? currEmotion : prevEmotion;
+      //   });
+      //   console.log(maxEmotion);
+      //   sessionStorage.setItem("Mood",maxEmotion);
+      //   setIsResponseSuccessful(true);
+      //   onUploadSuccess(); 
+      // } else {
+      //   setIsResponseSuccessful(false);
+      // 
     } catch (error) {
       console.error(error);
     }

@@ -53,7 +53,16 @@ function Login(props) {
         props.setToken(responseData.atk);
         sessionStorage.setItem('email',Email_ID);
         if (responseData.status === 'Auth Success!') {
-          navigate('/user/home');}
+          if(responseData.user_type===0)
+          {
+            navigate('/user/home');
+          }
+          else if(responseData.user_type===1)
+          {
+            // alert("You are an admin");
+            navigate('/admin/dashboard');
+          }
+          }
         else alert("Invalid Email address or Password");
         }
       })
