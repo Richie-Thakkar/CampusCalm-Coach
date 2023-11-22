@@ -7,10 +7,11 @@ import {useState } from "react";
 
 function Memory()
 {
-	const [mem,setMem] = useState(0)
+	const [memory,setMemory] = useState(0)
 	const AR_Score = sessionStorage.getItem("AR_Score")
 	const LR_Score = sessionStorage.getItem("LR_Score")
 	const VA_Score = sessionStorage.getItem("VA_Score")
+	const mem = Math.round(memory*100/142)
 	const report = {LR_Score,AR_Score,VA_Score,mem}
 	const func = () => {
 
@@ -24,8 +25,8 @@ function Memory()
 		<input
 		type="text"
 		placeholder="Give your Score..."
-		value={mem}
-		onChange={(e) => setMem(e.target.value)}
+		value={memory}
+		onChange={(e) => setMemory(e.target.value)}
 		onKeyPress={(e)=>{if(e.key === "Enter"){sessionStorage.setItem('Mem_Score',mem);
 			fetch(`${process.env.REACT_APP_BACKEND_URL}/career`,{
 				method: "POST",

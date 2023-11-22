@@ -75,7 +75,9 @@ const NumericalAbility = () => {
     setScore(calculatedScore);
     setShowResults(true);
     console.log(score)
-    sessionStorage.setItem("AR_Score",score);
+    calculatedScore = calculatedScore*100
+	  calculatedScore = calculatedScore / 25
+	  sessionStorage.setItem("AR_Score",parseInt(calculatedScore));
           
   };
   

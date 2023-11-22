@@ -3,7 +3,6 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { PieChart, pieArcLabelClasses } from '@mui/x-charts/PieChart';
 import './CareerTests.css';
-import './MoodTest.css';
 
 const App = () => {
   const data = [
@@ -25,6 +24,7 @@ const App = () => {
   return (
     <div>
       <Navbar />
+	  <div className="flexwrapper">
       <span className="mtheading">Pie Chart</span>
       <PieChart
         series={[
@@ -45,14 +45,17 @@ const App = () => {
         width={800}
         height={750}
       />
+	  </div>
       <span className="mtheading">Careers Suggested according to the test scores and likes</span>
-      {careers.map((career) => (
+      <div className="reports">
+	  {careers.map((career) => (
         <section className="TestSection" key={career}>
           <button className="startButton1" style={{ marginTop: '1vmax' }}>
             {career}
           </button>
         </section>
       ))}
+	  </div>
       <Footer />
     </div>
   );
