@@ -213,6 +213,21 @@ def chatbot():
     # return jsonify(bot_response="I have received your message. You are OP...Your are awesome!!")
 
 
+@app.route('/getSentiment', methods=['POST'])
+@cross_origin(supports_credentials=True)
+def getSentiment():
+    text=request.json['message']
+    response = openai.ChatCompletion.create(
+    model="gpt-3.5-turbo",
+    messages=[
+            {"role": "user", "content": "Give Sentiment Analysis for the text you will be given in a length from one word minimum to 10 words maximum"},
+            {"role": "user", "content": text},
+    ],
+    temperature=0,
+)
+
+    return jsonify(sentiment=response['choices'][0]['message']['content'])
+
 @app.route('/checkMail', methods=['POST'])
 @cross_origin(supports_credentials=True)
 def check():

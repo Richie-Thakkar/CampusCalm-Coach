@@ -42,7 +42,7 @@ function AdminNavbar()
           <nav className={`navBlock ${isMenuOpen ? 'open' : ''}`}>
             <ul>
               <NavLink to='/admin/dashboard'><li>Moderate Users</li></NavLink>
-              <NavLink to='/admin/adminblog'><li>Moderate Blogs</li></NavLink>
+              <NavLink to='/admin/blogs'><li>Moderate Blogs</li></NavLink>
               <NavLink to='/admin/psy'><li>Moderate Psychiatrists</li></NavLink>
               <li style={{"cursor":"pointer"}} onClick={handleLogOut}>Log Out</li>
             </ul>
