@@ -9,7 +9,7 @@ const categories = [
   "Numbers",
   "Permutation_and_combination",
   "Series",
-  "Time_and_distance",
+  // "Time_and_distance",
   "Trains",
 ];
 
@@ -28,7 +28,7 @@ const NumericalAbility = () => {
         const response = await fetch(`/Arithmetic_Reasoning/${category}.json`);
         const data = await response.json();
         const shuffledQuestions = [...data].sort(() => Math.random() - 0.5);
-        const selectedQuestions = shuffledQuestions.slice(0, 4);
+        const selectedQuestions = shuffledQuestions.slice(0, 5);
         fetchedQuestions[category] = selectedQuestions;
         const questionsWithAnswers = selectedQuestions.map((question) => ({
           ...question,
@@ -66,7 +66,7 @@ const NumericalAbility = () => {
 
       const optionIndex = questions[category][questionIndex].options.indexOf(selectedOption);
       const correctAnswerChar = String.fromCharCode(97 + optionIndex); // 'a' corresponds to 97 in ASCII
-
+      console.log(`Correct Answer Char: ${correctAnswerChar}`);
       if (correctAnswerChar === correctAnswer) {
         calculatedScore++;
       }
@@ -75,7 +75,7 @@ const NumericalAbility = () => {
     setScore(calculatedScore);
     setShowResults(true);
     console.log(score)
-    sessionStorage.setItem("AR_Score",score);
+    sessionStorage.setItem("AR_Score",calculatedScore);
           
   };
   
