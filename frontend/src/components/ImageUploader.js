@@ -68,9 +68,9 @@ const ImageUploader = ({ onUploadSuccess }) => {
       //     return emotions[currEmotion] > emotions[prevEmotion] ? currEmotion : prevEmotion;
       //   });
       //   console.log(maxEmotion);
-      //   sessionStorage.setItem("Mood",maxEmotion);
-      //   setIsResponseSuccessful(true);
-      //   onUploadSuccess(); 
+      sessionStorage.setItem("Mood",result['prediction']);
+         setIsResponseSuccessful(true);
+      onUploadSuccess(); 
       // } else {
       //   setIsResponseSuccessful(false);
       // 

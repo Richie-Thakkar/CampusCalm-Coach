@@ -39,9 +39,8 @@ function Navbar()
           </div>
           <nav className={`navBlock ${isMenuOpen ? 'open' : ''}`}>
             <ul>
-              <NavLink to='/user/aboutUs'><li>About us</li></NavLink>
-              <NavLink to='/user/contactUs'><li>Contact us</li></NavLink>
-              <NavLink to='/psy/Blogs'><li>Blogs</li></NavLink>
+
+              {/* <NavLink to='/psy/PsyBlog'><li>Create Blog</li></NavLink> */}
               <li style={{"cursor":"pointer"}} onClick={handleLogOut}>Log Out</li>
             </ul>
           </nav>

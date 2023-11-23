@@ -65,7 +65,7 @@ function AD() {
 </button>  </p>):<p className="buttonlocator"><button class="deletebtn btn-delete">
   <span class="mdi mdi-delete mdi-24px"></span>
   <span class="mdi mdi-delete-empty mdi-24px"></span>
-  <span>Cannot Delete Admin</span>
+  <span>Cannot Delete Admin/Blogger</span>
 </button>  </p>}
               
             </div>

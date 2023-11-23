@@ -62,6 +62,10 @@ function Login(props) {
             // alert("You are an admin");
             navigate('/admin/dashboard');
           }
+          else if(responseData.user_type===2)
+          {
+            navigate('/psy/PsyBlog');
+          }
           }
         else alert("Invalid Email address or Password");
         }

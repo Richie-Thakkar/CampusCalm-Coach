@@ -28,10 +28,13 @@ function PsyBlog(){
         console.log(sessionStorage.getItem("b64string"));
         const image=sessionStorage.getItem("b64string");
         setFormData({ ...formData, image });
+        alert("Image selected succesfully!!")
         // await saveImageToBackend(base64String);
       } catch (error) {
+        alert("There was a problem submitting the image please try again")
         console.error(error);
       }
+      
     };
   
     const getSelectedFile = () => {
@@ -132,7 +135,9 @@ function PsyBlog(){
           body: JSON.stringify({...formData }),
         })
           .then((response) => response.json())
-          .then((data) => console.log(data));
+          .then((data) => console.log(data))
+          .then(alert("Blog Created Succesfully"))
+          .then(window.location.reload());
       };
     return(
         <div>

@@ -22,8 +22,10 @@ function Memory()
 		<div className="flexwrapper">
 		<iframe src="https://practicalpie.com/free-memory-test/#memorytest" frameborder="100" className="memoryquiz"></iframe>
 		</div>
+		<div style={{"display":"flex","flexDirection":"column","alignItems":"center"}}>
 		<input
 		type="text"
+		style={{"height":"2.5vmax","textAlign":"center","padding":"1vmax"}}
 		placeholder="Give your Score..."
 		value={memory}
 		onChange={(e) => setMemory(e.target.value)}
@@ -48,6 +50,7 @@ function Memory()
 		/>
 
 		<div className='btdiv'><NavLink to='/user/career_test/likes'><button type='submit' className='startButton'>Go to next Assesment</button></NavLink></div>
+		</div>
 		<Footer/>
 		</>
 	)

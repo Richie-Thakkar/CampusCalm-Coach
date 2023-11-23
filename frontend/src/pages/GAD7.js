@@ -14,6 +14,7 @@ function GAD7(){
     }));
   };
   const calculateScore = () => {
+    alert("Report Generated Succesfully you can view the same through the show Reports Section")
     let newScore = 0;
     Object.keys(selectedOptions).forEach((questionId) => {
       const option = selectedOptions[questionId];
@@ -101,7 +102,7 @@ fetch(`${process.env.REACT_APP_BACKEND_URL}/insertReport`, {
         ))}
       </div>
       <div style={{"display":"flex","justifyContent":"center"}}>
-      <NavLink to="/user/showReports"><button className="startButton" style={{"marginTop":"1vmax"}} disabled={Object.keys(selectedOptions).length !== questions.length} onClick={calculateScore}>Finish Assesment</button></NavLink>
+      <NavLink to="/user/home"><button className="startButton" style={{"marginTop":"1vmax"}} disabled={Object.keys(selectedOptions).length !== questions.length} onClick={calculateScore}>Finish Assesment</button></NavLink>
   </div>
   <Footer/>
         </section>

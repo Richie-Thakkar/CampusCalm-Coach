@@ -1,10 +1,9 @@
 .container
 {
-    width: 80%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     margin-top: 55px;
-    margin-bottom: 55px;
+    margin: 15vh;
 }
 
 .ctsection {
@@ -14,13 +13,7 @@
     min-height: 100vh;
   }
   
-  .container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-top: 55px;
-    margin-bottom: 83px;
-  }
+ 
   
 .contact-box
 {

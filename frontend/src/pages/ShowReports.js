@@ -16,7 +16,7 @@ const{token}=UseToken();
       body: JSON.stringify({ Email_ID: sessionStorage.getItem("email") }),
     })
       .then((response) => response.json())
-      .then((data) => setReports(data));
+      .then((data) => setReports(data))
   }, []);
 
   return (
