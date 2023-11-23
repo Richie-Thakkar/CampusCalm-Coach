@@ -81,6 +81,9 @@ const LogicalReasoning = () => {
     setScore(calculatedScore);
     setShowResults(true);
     sessionStorage.setItem("LR_Score",calculatedScore);
+	 calculatedScore = calculatedScore*100
+	  calculatedScore = calculatedScore/24
+    sessionStorage.setItem("LR_Score",parseInt(calculatedScore));
           
   };
   
