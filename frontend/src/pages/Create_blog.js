@@ -58,7 +58,7 @@ function Create_blog(){
             ))}
           </div>
             <NavLink
-            to="/psy/blogCreate"
+            to="/psy/PsyBlog"
             exact>
                 <button className="searchbtn">
                     Add new Blog
