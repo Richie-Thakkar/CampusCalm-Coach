@@ -35,7 +35,7 @@ function Navbar()
         <div className='outer'>
         <div className='inner1'>
           <div className='logoBlock'>
-          <NavLink to='/user/home'><h3 className='logo'>CampusCalm Coach</h3></NavLink>
+          <NavLink to='/user/home'><h3 className='logo'>CampusCalm Coach Blogger</h3></NavLink>
           </div>
           <nav className={`navBlock ${isMenuOpen ? 'open' : ''}`}>
             <ul>

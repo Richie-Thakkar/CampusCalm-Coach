@@ -58,7 +58,7 @@ function AD() {
               <p><b>Specialty:</b><br/> <span>{user[7]}</span></p>
               <p><b>DOB:</b><br/> <span>{user[8]}</span></p>
               <p><b>User_Type:</b><br/> <span>{user[10]===0?"Normal User":"Admin"}</span></p>
-              {user[10]===0?(<p className="buttonlocator"  onClick={() => handleDelete(user[0])}><button class="deletebtn btn-delete">
+              {user[10]===0?(<p className="buttonlocator"  onClick={() => handleDelete(user[0])}><button className="blogdeletebtn">
   <span class="mdi mdi-delete mdi-24px"></span>
   <span class="mdi mdi-delete-empty mdi-24px"></span>
   <span>Delete User</span>

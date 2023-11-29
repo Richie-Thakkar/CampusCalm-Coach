@@ -49,12 +49,12 @@ const{token}=UseToken();
               <br />
               <span className="rpheader">Probable Depression Diagnosed?</span>
               <br />
-              <span>{report[4] > 4 ? "Yes" : "No"}</span> 
+              <span>{report[4] > 5 ? "Yes" : "No"}</span> 
               <br />
               <br />
               <span className="rpheader">Probable Generalized Anxiety Disorder Diagnosed?</span>
               <br />
-              <span>{report[5] > 4 ? "Yes" : "No"}</span> 
+              <span>{report[5] > 5 ? "Yes" : "No"}</span> 
               <br />
               <br />
             </div>

@@ -57,7 +57,7 @@ function ContactUs(){
                             <tbody>
                             <tr>
                                 <td>Email</td>
-                                <td>contactus@insurancesaathi.com</td>
+                                <td>contactus@CampusCalmCoach.com</td>
                             </tr>
                             <tr>
                                 <td>Phone</td>

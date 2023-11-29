@@ -3,6 +3,8 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { PieChart, pieArcLabelClasses } from '@mui/x-charts/PieChart';
 import './CareerTests.css';
+import html2pdf from 'html2pdf.js';
+import { useRef } from 'react';
 
 const App = () => {
   const data = [
@@ -11,6 +13,7 @@ const App = () => {
     { id: 2, label: 'Numerical Ability', value: parseInt(sessionStorage.getItem('AR_Score')) },
     { id: 3, label: 'Memory', value: parseInt(sessionStorage.getItem('Mem_Score')) }
   ];
+  
 
   var ar1 = sessionStorage.getItem('career');
   ar1 = ar1.substring(1, ar1.length - 2).split(',');
@@ -21,9 +24,22 @@ const App = () => {
     ...ar2
   ];
 
+    const contentRef = useRef(null);
+
+  const handleDownloadPDF = () => {
+    const content = contentRef.current;
+
+    // html2pdf()
+    //   .from(content)
+    //   .save('career_report.pdf');
+    html2pdf().from(content).set({ scale: 0.4 }).save('career_report.pdf');
+
+  };
+
   return (
-    <div>
+    <div >
       <Navbar />
+      <div ref={contentRef} className='printdiv'>
 	  <div className="flexwrapper">
       <span className="mtheading">Pie Chart</span>
       <PieChart
@@ -55,7 +71,9 @@ const App = () => {
           </button>
         </section>
       ))}
-	  </div>
+      </div>
+      	  </div>
+          <button className='submit btn' onClick={handleDownloadPDF}>Download Report</button>
       <Footer />
     </div>
   );

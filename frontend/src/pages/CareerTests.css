@@ -2,8 +2,12 @@
     margin-top: 5vmax;
     display: grid;
 grid-template-columns: auto auto auto;
-gap: 11vmax;
-justify-content: space-evenly;
+grid-gap: 2px;
+justify-content: flex-start;
+}
+.printdiv{
+    overflow: hidden;
+    overflow-wrap: break-word;
 }
 .startButton1{
     color: white;

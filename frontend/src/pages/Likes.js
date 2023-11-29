@@ -5,8 +5,11 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
+
+
 function Likes(){
 	const [selectedOptions, setSelectedOptions] = useState([]);
+	const [shouldNavigate, setShouldNavigate] = useState(false);
 
 	const handleOptionSelect = (questionId, option) => {
 		setSelectedOptions((prevSelectedOptions) => ([
@@ -14,9 +17,10 @@ function Likes(){
 			option,
 		]));
 	};
+
 	const calculateScore = () => {
 		console.log(selectedOptions)
-		fetch(`${process.env.REACT_APP_BACKEND_URL}/likes`,{
+		 fetch(`${process.env.REACT_APP_BACKEND_URL}/likes`,{
 			method: "POST",
 			headers:{
 				"Content-Type": "application/json",
@@ -32,6 +36,10 @@ function Likes(){
 			)
 			.then((data) => {console.log(data);sessionStorage.setItem("career",JSON.stringify(data))})
 			.catch((error) => console.error(error))
+			setTimeout(() => {
+				// After the calculation is complete, set shouldNavigate to true to allow navigation
+				setShouldNavigate(true);
+			  }, 7000); 
 	};
 
 	const questions = [
@@ -206,7 +214,20 @@ function Likes(){
 		))}
 		</div>
 		<div style={{"display":"flex","justifyContent":"center"}}>
-		<NavLink to="/user/career_test/report"><button className="startButton" style={{"marginTop":"1vmax"}} disabled={Object.keys(selectedOptions).length !== questions.length} onClick={calculateScore}>Submit</button></NavLink>
+		{/* <NavLink to="/user/career_test/report"><button className="startButton" style={{"marginTop":"1vmax"}} onClick={calculateScore} >Submit</button></NavLink> */}
+		{shouldNavigate ? (
+        <NavLink to="/user/career_test/report">
+          <button className="startButton" style={{ marginTop: '1vmax' }} >
+            Submit
+          </button>
+        </NavLink>
+      ) : (
+        // If shouldNavigate is false, render the button to trigger calculateScore
+        <button className="startButton" style={{ marginTop: '1vmax' }} onClick={calculateScore}>
+          Submit
+        </button>
+      )}
+
 		</div>
 		<Footer/>
 		</section>
