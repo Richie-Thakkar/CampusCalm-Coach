@@ -30,7 +30,7 @@ The platform currently does not verify the authenticity of the psychiatrist data
 2. Data:
    The data of the pyschiatrists is fake data generated using [Mockaroo](https://www.mockaroo.com/) to be legally compliant.
 
-## Datasets Used
+### Datasets Used
 - [CK+ dataset](https://www.kaggle.com/datasets/davilsena/ckdataset)
 - [O*NET](https://www.onetonline.org/)
 - [Mapped Dataset of Educational Subjects and Careers](https://docs.google.com/spreadsheets/d/1k47p3yOq6oqPPqlFgJVHiLhHaAzm7C9GHTLIoZrG3YI/edit?usp=sharing)
