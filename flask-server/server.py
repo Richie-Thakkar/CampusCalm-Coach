@@ -90,8 +90,9 @@ def getEmotion():
 @cross_origin(supports_credentials=True)
 def likes():
     like = request.get_json()
+    print("Received data:", like)
     like = [like]
-    print(like)
+    print("Data for SVM prediction:", like)
     svm = pickle.load(open('./models/likes/svm.txt','rb'))
     dt = pickle.load(open('./models/likes/dt.txt','rb'))
     gb = pickle.load(open('./models/likes/gb.txt','rb'))

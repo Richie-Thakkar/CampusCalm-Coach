@@ -8,40 +8,6 @@ import { useState } from "react";
 
 
 function Likes(){
-	const [selectedOptions, setSelectedOptions] = useState([]);
-	const [shouldNavigate, setShouldNavigate] = useState(false);
-
-	const handleOptionSelect = (questionId, option) => {
-		setSelectedOptions((prevSelectedOptions) => ([
-			...prevSelectedOptions,
-			option,
-		]));
-	};
-
-	const calculateScore = () => {
-		console.log(selectedOptions)
-		 fetch(`${process.env.REACT_APP_BACKEND_URL}/likes`,{
-			method: "POST",
-			headers:{
-				"Content-Type": "application/json",
-				Authorization:"Bearer" + sessionStorage.getItem("token"),
-			},
-			body: JSON.stringify(selectedOptions),
-			credentials: 'include',
-		})
-			.then((response) =>{
-				if(!response.ok) throw new Error('Network respnse was not ok')
-				return response.json()
-			}
-			)
-			.then((data) => {console.log(data);sessionStorage.setItem("career",JSON.stringify(data))})
-			.catch((error) => console.error(error))
-			setTimeout(() => {
-				// After the calculation is complete, set shouldNavigate to true to allow navigation
-				setShouldNavigate(true);
-			  }, 7000); 
-	};
-
 	const questions = [
 		{
 			id: 1,
@@ -190,47 +156,99 @@ function Likes(){
 			options: [1, 2, 3,4,5],
 		},
 	];
-
-	return(
+	const defaultSelectedOptions = questions.reduce((acc, curr) => {
+		return {
+		  ...acc,
+		  [curr.id]: 1 // Assuming the default selection is the first option (value: 1)
+		};
+	  }, {});
+	
+	  const [selectedOptions, setSelectedOptions] = useState(defaultSelectedOptions);
+	  const [shouldNavigate, setShouldNavigate] = useState(false);
+	
+	  const handleOptionSelect = (questionId, option) => {
+		setSelectedOptions((prevSelectedOptions) => ({
+		  ...prevSelectedOptions,
+		  [questionId]: option,
+		}));
+	  };
+	
+	  const calculateScore = () => {
+		console.log(selectedOptions);
+		fetch(`${process.env.REACT_APP_BACKEND_URL}/likes`, {
+		  method: "POST",
+		  headers: {
+			"Content-Type": "application/json",
+			Authorization: "Bearer " + sessionStorage.getItem("token"),
+		  },
+		  body: JSON.stringify(Object.values(selectedOptions)),
+		  credentials: 'include',
+		})
+		  .then((response) => {
+			if (!response.ok) throw new Error('Network response was not ok');
+			return response.json();
+		  })
+		  .then((data) => {
+			console.log(data);
+			sessionStorage.setItem("career", JSON.stringify(data));
+		  })
+		  .catch((error) => console.error(error))
+		  .finally(() => {
+			// After the calculation is complete, set shouldNavigate to true to allow navigation
+			setShouldNavigate(true);
+		  });
+	  };
+	
+	  return (
 		<section className="mtestsect">
-		<Navbar/>
-		<span className="mtheading">Likes and Dislikes</span>
-		<span className="mtsubheading">The ratings to be given are as follows: 1: - Not at all 5: - Most interested</span>
-		<div className="quiz">
-		{questions.map((q) => (
-			<div key={q.id} className="srqdiv">
-			<p className="srqques">{q.question}</p>
-			<div className="options">
-			{q.options.map((option, index) => (
-				<React.Fragment key={index}>
-				<label htmlFor={`${q.id}-${index}`} className="qlabel">
-				{option}
-				</label>
-				<input type="radio" name={`opt-${q.id}`} value={option} id={`${q.id}-${index}`} onChange={() => handleOptionSelect(q.id, option)} required/>
-				</React.Fragment>
+		  <Navbar />
+		  <span className="mtheading">Likes and Dislikes</span>
+		  <span className="mtsubheading">
+			The ratings to be given are as follows: 1: - Not at all 5: - Most interested
+		  </span>
+		  <div className="quiz">
+			{questions.map((q) => (
+			  <div key={q.id} className="srqdiv">
+				<p className="srqques">{q.question}</p>
+				<div className="options">
+				  {q.options.map((option, index) => (
+					<React.Fragment key={index}>
+					  <label htmlFor={`${q.id}-${index}`} className="qlabel">
+						{option}
+					  </label>
+					  <input
+						type="radio"
+						name={`opt-${q.id}`}
+						value={option}
+						id={`${q.id}-${index}`}
+						checked={selectedOptions[q.id] === option}
+						onChange={() => handleOptionSelect(q.id, option)}
+						required
+					  />
+					</React.Fragment>
+				  ))}
+				</div>
+			  </div>
 			))}
-			</div>
-			</div>
-		))}
-		</div>
-		<div style={{"display":"flex","justifyContent":"center"}}>
-		{/* <NavLink to="/user/career_test/report"><button className="startButton" style={{"marginTop":"1vmax"}} onClick={calculateScore} >Submit</button></NavLink> */}
-		{shouldNavigate ? (
-        <NavLink to="/user/career_test/report">
-          <button className="startButton" style={{ marginTop: '1vmax' }} >
-            Submit
-          </button>
-        </NavLink>
-      ) : (
-        // If shouldNavigate is false, render the button to trigger calculateScore
-        <button className="startButton" style={{ marginTop: '1vmax' }} onClick={calculateScore}>
-          Submit
-        </button>
-      )}
-
-		</div>
-		<Footer/>
+		  </div>
+	
+		  <div style={{ display: "flex", justifyContent: "center" }}>
+			{shouldNavigate ? (
+			  <NavLink to="/user/career_test/report">
+				<button className="startButton" style={{ marginTop: '1vmax' }} >
+				  Submit
+				</button>
+			  </NavLink>
+			) : (
+			  <button className="startButton" style={{ marginTop: '1vmax' }} onClick={calculateScore}>
+				Submit
+			  </button>
+			)}
+		  </div>
+		  <Footer />
 		</section>
-	)
-}
-export default Likes
+	  );
+	}
+	
+	export default Likes;
+	

@@ -41,7 +41,7 @@ const App = () => {
       <Navbar />
       <div ref={contentRef} className='printdiv'>
 	  <div className="flexwrapper">
-      <span className="mtheading">Pie Chart</span>
+      <span className="mtheading">Skill Distribution</span>
       <PieChart
         series={[
           {
