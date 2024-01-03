@@ -236,7 +236,7 @@ function Likes(){
 			{shouldNavigate ? (
 			  <NavLink to="/user/career_test/report">
 				<button className="startButton" style={{ marginTop: '1vmax' }} >
-				  Submit
+				  Generate Report
 				</button>
 			  </NavLink>
 			) : (
